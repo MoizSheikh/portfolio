@@ -25,3 +25,172 @@ body {
     text-wrap: balance;
   }
 }
+
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+::selection {
+  background: #9bd0f7;
+}
+input,textarea {
+  font-size: 12px !important; /* Adjust this value to your preferred size */
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: black;
+  font-size: 12px; /* Ensure autofill text size also adjusts */
+}
+.input:hover {
+  background-color: inherit; /* Remove any background change */
+  border-color: inherit; /* Remove any border color change */
+}
+.input:focus {
+  background-color: inherit; /* Remove any background change */
+  border-color: inherit; /* Remove any border color change */
+}
+.no-focus-styles:focus {
+  outline: none; /* Remove default focus outline */
+  box-shadow: none; /* Remove focus box shadow */
+  background-color: inherit; /* Remove focus background color */
+  border-color: inherit; /* Remove focus border color */
+  color: inherit; /* Remove focus text color */
+}
+
+.steps-vertical .step:before {
+  display: none;
+}
+
+.steps .step[data-content]:after {
+  content: attr(data-content);
+  background: white;
+  border: 1px solid black;
+}
+
+.referral-svg-container {
+  max-width: 100%;
+}
+
+.navbar {
+  max-height: 100px;
+  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.15);
+}
+
+.roundCirlceIcon {
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid grey;
+  padding: 10px;
+}
+
+.homepPageFullCard {
+  box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.2);
+}
+
+@layer components {
+  .home-container {
+    @apply xl:px-40 lg:px-32 md:px-20 sm:px-10 px-4;
+  }
+  .pages-container {
+    @apply xl:px-20 sm:px-10 px-4;
+  }
+}
+@layer utilities {
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
+.firstSection {
+  background: url("/homesvg2.svg") no-repeat center;
+  background-size: cover; /* or 'contain' depending on the effect you want */
+  position: relative;
+  background-position: top;
+}
+.secondSection {
+  background: url("/homesvg3.svg") no-repeat center;
+  background-size: cover; /* or 'contain' depending on the effect you want */
+  position: relative;
+  background-position: 420px -340px;
+  /* background-position: top; */
+}
+.thirdSection {
+  background: url("/homesvg4.svg") no-repeat center;
+  background-size: cover; /* or 'contain' depending on the effect you want */
+  position: relative;
+  background-position: 0px -500px;
+}
+
+@media (max-width: 1024px) {
+  .firstSection,
+  .secondSection,
+  .thirdSection {
+    background: none;
+  }
+
+  .homepPageFullCard {
+    box-shadow: none;
+  }
+}
+
+
+.Radioinput {display: none;}
+.Radiolabel {display: block;}
+
+.Radioinput + div  {
+  background: rgba(96, 102, 102, 0.1);
+  border-radius: 50px;
+  min-width: 50px;
+  text-align: center;
+}
+
+.Radioinput + div .Radiolabel {
+  padding: 5px 10px;
+  cursor: pointer;
+  color: #000;
+}
+
+.Radioinput:checked + div {
+  background: #388087;
+  color: white
+}
+
+.collapse-title.homeCollapse span::after {
+  margin-left: 8px; /* Space between text and symbol */
+}
+
+.formInput {
+  background-color: rgba(194, 237, 206, 0.12);
+  color: black;
+}
+.contactInput {
+  background-color: white;
+  color: black;
+}
+.textarea {
+  resize: none; /* Disable resizing */
+  overflow: hidden; /* Hide scrollbars */
+  white-space: nowrap; /* Prevent line breaks */
+  text-overflow: ellipsis; /* Add ellipsis for overflow text */
+  width: 100%; /* Ensure it takes full width */
+  max-height: 100px; /* Set a maximum height if needed */
+}
+
+.textarea::placeholder {
+  overflow: hidden; /* Prevent scrollbar for the placeholder */
+  white-space: nowrap; /* Prevent line breaks in the placeholder */
+  text-overflow: ellipsis; /* Add ellipsis for overflow */
+}
