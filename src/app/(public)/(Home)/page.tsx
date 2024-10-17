@@ -12,14 +12,12 @@ import {
   Icon3Svg,
   Icon4Svg,
   Icon5Svg,
-  PersonalizedCommunicationSvg,
-  CardLinksvg,
-  Benefit1Svg,
+  PersonalizedCommunicationSvg, Benefit1Svg,
   Benefit2Svg,
   Benefit3Svg,
   Benefit4Svg,
   Benefit5Svg,
-  Benefit6Svg,
+  Benefit6Svg
 } from "@/app/_lib/assets/HomepageSVG";
 import Button from "@/app/_components/Buttons/HomepageBtn";
 import Image from "next/image";

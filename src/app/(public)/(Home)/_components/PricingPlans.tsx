@@ -1,7 +1,10 @@
 import Button from "@/app/_components/Buttons/HomepageBtn";
 import { CardLinksvg } from "@/app/_lib/assets/HomepageSVG";
 
-const PricingPlans = async ({ hideBtn = false }: any) => {
+interface PricingPlansProps {
+  hideBtn?: boolean;
+}
+const PricingPlans = async ({ hideBtn = false }: PricingPlansProps) => {
   return (
     <section
       className={`home-container flex flex-col ${
