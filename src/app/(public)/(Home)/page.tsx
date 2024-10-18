@@ -1,3 +1,4 @@
+"use client";
 import {
   Personalized,
   Step1svg,
@@ -26,20 +27,23 @@ import Testimonial from "./_components/Testimonial";
 import FAQSection from "./_components/Faq";
 import PricingPlans from "./_components/PricingPlans";
 import SkillsSection from "./_components/SkillsSection";
+import ColorToggle from "@/app/_components/ColorToggle/ColorToggle";
+import { ThemeProvider } from "@/app/_lib/context/ThemeController";
 
-const Home = async () => {
+const Home = () => {
   return (
-    <>
-      <div className="min-h-screen bg-white z-0">
-        <div className=" w-full m-auto text-center md:text-left text-gray-800 z-20 relative ">
+    <ThemeProvider>
+      <div className="min-h-screen bg-background z-0">
+        <div className=" w-full m-auto text-center md:text-left text-para z-20 relative ">
+          <ColorToggle />
           <div className="firstSection pb-8">
             {/* Hero Section */}
-            <section className="home-container py-4 lg:py-10 lg:mt-8 lg:mb-8 w-full bg-transparent text-center md:text-left flex items-center flex-col-reverse md:flex-row align-middle justify-start gap-14">
+            <section className="home-container py-4 lg:py-10 lg:mt-8 lg:mb-8 w-full bg-background text-center md:text-left flex items-center flex-col-reverse md:flex-row align-middle justify-start gap-14">
               <div className="w-full lg:w-7/12">
-                <h1 className="text-3xl lg:text-5xl font-bold !leading-tight">
+                <h1 className="text-3xl lg:text-5xl font-bold !leading-tight text-heading">
                   Abdul Moiz Sheikh
                 </h1>
-                <div className="my-6 text-gray-600 w-full lg:w-4/5 font-light !leading-6">
+                <div className="my-6 text-para w-full lg:w-4/5 font-light !leading-6">
                   I am a dedicated software engineer with a focus on creating
                   efficient and scalable web applications. With expertise in
                   React, Next.js, and TypeScript, I thrive on solving complex
@@ -396,7 +400,7 @@ const Home = async () => {
           </div>
         </div>
       </div>
-    </>
+    </ThemeProvider>
   );
 };
 

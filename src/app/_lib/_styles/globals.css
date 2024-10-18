@@ -2,17 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* :root { */
+.light {
+  --background: #f6f6f2; /* Light and neutral, ideal for backgrounds */
+  --foreground: #0a090c; /* Dark enough for text, ensuring readability */
+  --primary: #005e7c; /* Rich teal for primary buttons and elements */
+  --secondary: #5eb1bf; /* Softer teal for secondary elements or background highlights */
+  --tertiary: #1b1725; /* Deep purple for tertiary content or less prominent elements */
+  --accent: #ff6347; /* Tomato red for important highlights, call-to-action buttons */
+  --secondaryAccent: #1b1725; /* Dark purple again, used sparingly for minor accents */
+  --tertiaryAccent: #5eb1bf; /* Reused soft teal for subtle accent elements like borders */
+  --heading: #0a090c; /* Dark text for headings */
+  --para: #5eb1bf; /* Soft teal for paragraph text */
+  --muted: #1b1725; /* Dark for muted text */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* @media (prefers-color-scheme: dark) {
+  :root { */
+.dark {
+  --background: #0a090c; /* Dark background for contrast */
+  --foreground: #fffded; /* Light foreground text for readability */
+  --primary: #5eb1bf; /* Soft teal stands out against the dark background */
+  --secondary: #005e7c; /* Deeper teal for secondary elements */
+  --tertiary: #1b1725; /* Dark purple for subtle contrast */
+  --accent: #ff6347; /* Tomato red for attention-grabbing elements */
+  --secondaryAccent: #fffded; /* Light accent for minor details (invert from light theme) */
+  --tertiaryAccent: #5eb1bf; /* Same soft teal for consistency */
+  --heading: #fffded; /* Light text for headings */
+  --para: #5eb1bf; /* Soft teal for paragraph text */
+  --muted: #5eb1bf; /* Soft teal for muted text */
 }
+/* } */
 
 body {
   color: var(--foreground);
@@ -26,7 +46,6 @@ body {
   }
 }
 
-
 html,
 body {
   height: 100%;
@@ -36,7 +55,8 @@ body {
 ::selection {
   background: #9bd0f7;
 }
-input,textarea {
+input,
+textarea {
   font-size: 12px !important; /* Adjust this value to your preferred size */
 }
 
@@ -62,16 +82,6 @@ input:-webkit-autofill:active {
   background-color: inherit; /* Remove focus background color */
   border-color: inherit; /* Remove focus border color */
   color: inherit; /* Remove focus text color */
-}
-
-.steps-vertical .step:before {
-  display: none;
-}
-
-.steps .step[data-content]:after {
-  content: attr(data-content);
-  background: white;
-  border: 1px solid black;
 }
 
 .referral-svg-container {
@@ -144,28 +154,6 @@ input:-webkit-autofill:active {
   .homepPageFullCard {
     box-shadow: none;
   }
-}
-
-
-.Radioinput {display: none;}
-.Radiolabel {display: block;}
-
-.Radioinput + div  {
-  background: rgba(96, 102, 102, 0.1);
-  border-radius: 50px;
-  min-width: 50px;
-  text-align: center;
-}
-
-.Radioinput + div .Radiolabel {
-  padding: 5px 10px;
-  cursor: pointer;
-  color: #000;
-}
-
-.Radioinput:checked + div {
-  background: #388087;
-  color: white
 }
 
 .collapse-title.homeCollapse span::after {

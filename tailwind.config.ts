@@ -14,10 +14,14 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        primary: "#388087",
-        "primary-accent": "rgba(194, 237, 206, 0.30)",
-        "slate-btn": "#6FB3B8",
-        "refferal-bg": "#F6F6F2",
+        background: "var(--background)",
+        foreground: "var(--foreground)",
+        primary: "var(--primary)",
+        secondary: "var(--secondary)",
+        tertiary: "var(--tertiary)",
+        accent: "var(--accent)",
+        secondaryAccent: "var(--secondaryAccent)",
+        tertiaryAccent: "var(--tertiaryAccent)",
       },
       boxShadow: {
         md: "0 4px 9px 4px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
@@ -38,5 +42,6 @@ const config: Config = {
     },
   },
   plugins: [require("daisyui")],
+  // darkMode:"class",
 };
 export default config;
