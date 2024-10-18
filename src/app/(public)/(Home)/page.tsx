@@ -12,18 +12,20 @@ import {
   Icon3Svg,
   Icon4Svg,
   Icon5Svg,
-  PersonalizedCommunicationSvg, Benefit1Svg,
+  PersonalizedCommunicationSvg,
+  Benefit1Svg,
   Benefit2Svg,
   Benefit3Svg,
   Benefit4Svg,
   Benefit5Svg,
-  Benefit6Svg
+  Benefit6Svg,
 } from "@/app/_lib/assets/HomepageSVG";
 import Button from "@/app/_components/Buttons/HomepageBtn";
 import Image from "next/image";
 import Testimonial from "./_components/Testimonial";
 import FAQSection from "./_components/Faq";
 import PricingPlans from "./_components/PricingPlans";
+import SkillsSection from "./_components/SkillsSection";
 
 const Home = async () => {
   return (
@@ -35,15 +37,17 @@ const Home = async () => {
             <section className="home-container py-4 lg:py-10 lg:mt-8 lg:mb-8 w-full bg-transparent text-center md:text-left flex items-center flex-col-reverse md:flex-row align-middle justify-start gap-14">
               <div className="w-full lg:w-7/12">
                 <h1 className="text-3xl lg:text-5xl font-bold !leading-tight">
-                  Create Your Personalized Interaction Manual Tailored Just for
-                  You
+                  Abdul Moiz Sheikh
                 </h1>
                 <div className="my-6 text-gray-600 w-full lg:w-4/5 font-light !leading-6">
-                  At Align, we believe that clear communication is the
-                  foundation of successful relationships, both in the workplace
-                  and in personal life. Our service creates a customized
-                  interaction manual that sets expectations and creates a better
-                  understanding for your communication preferences.
+                  I am a dedicated software engineer with a focus on creating
+                  efficient and scalable web applications. With expertise in
+                  React, Next.js, and TypeScript, I thrive on solving complex
+                  challenges, optimising performance, and delivering intuitive
+                  user experiences. Whether it's building from scratch or
+                  improving legacy code, I ensure clean, maintainable, and
+                  future-proof solutions that align with business goals and user
+                  needs.
                 </div>
                 <div className="mt-10 flex flex-col md:flex-row gap-4 mx-auto justify-center md:justify-start items-center lg:items-start">
                   <Button
@@ -70,6 +74,7 @@ const Home = async () => {
               </div>
             </section>
 
+            <SkillsSection />
             {/* How It Works */}
             <section className="home-container py-6 lg:py-16 text-center">
               <h2 className="text-4xl font-bold ">How It Works</h2>
