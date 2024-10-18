@@ -4,157 +4,157 @@ import React from "react";
 import { FaCode, FaServer, FaTools, FaUserTie } from "react-icons/fa"; // Importing Icons
 import { motion, useScroll, useTime, useTransform } from "framer-motion"; // For animations
 
-const icon = {
-  hidden: {
-    pathLength: 0,
-    fill: "rgba(255, 255, 255, 0)",
-  },
-  visible: {
-    pathLength: 1,
-    fill: "rgba(255, 255, 255, 1)",
-    transition: {
-      duration: 2, // You can adjust the duration
-      ease: "easeInOut",
-    },
-  },
-};
+// const icon = {
+//   hidden: {
+//     pathLength: 0,
+//     fill: "rgba(255, 255, 255, 0)",
+//   },
+//   visible: {
+//     pathLength: 1,
+//     fill: "rgba(255, 255, 255, 1)",
+//     transition: {
+//       duration: 2, // You can adjust the duration
+//       ease: "easeInOut",
+//     },
+//   },
+// };
 
-function MoizSvg({ rotate }) {
-  return (
-    <div>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 250 100"
-        width="250"
-        height="100"
-      >
-        {/* M */}
-        <motion.path
-          d="M10,90 L10,10 L50,50 L90,10 L90,90"
-          stroke="white"
-          strokeWidth="5"
-          variants={icon}
-          initial="hidden"
-          animate="visible"
-          fill="none"
-          style={{ fill: "none" }}
-        />
-        {/* O */}
-        <motion.path
-          d="M150,50 A20,20 0 1,1 150,49.9"
-          stroke="white"
-          strokeWidth="5"
-          variants={icon}
-          initial="hidden"
-          animate="visible"
-          style={{ fill: "none" }}
-        />
-        {/* I */}
-        <motion.path
-          d="M165,10 L165,90"
-          stroke="white"
-          strokeWidth="5"
-          variants={icon}
-          initial="hidden"
-          animate="visible"
-        />
-        {/* Z */}
-        <motion.path
-          d="M190,10 L240,10 L190,90 L240,90"
-          stroke="white"
-          strokeWidth="5"
-          fill="transparent"
-          variants={icon}
-          initial="hidden"
-          animate="visible"
-          style={{ fill: "none" }}
-        />
-      </svg>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 100 100"
-        width="250"
-        height="100"
-      >
-        {/* < */}
-        <motion.path
-          d="M40,20 L10,50 L40,80"
-          stroke="white"
-          strokeWidth="5"
-          fill="none"
-          variants={icon}
-          initial="hidden"
-          animate="visible"
-          style={{ fill: "none" }}
-        />
-        {/* / */}
-        {/* <motion.path
-          d="M50,80 L90,20"
-          stroke="white"
-          strokeWidth="5"
-          fill="none"
-          variants={icon}
-          initial="hidden"
-          animate="visible"
-          style={{ fill: "none" }}
-        /> */}
-        {/* > */}
-        <motion.path
-          d="M100,20 L130,50 L100,80"
-          stroke="white"
-          strokeWidth="5"
-          fill="none"
-          variants={icon}
-          initial="hidden"
-          animate="visible"
-          style={{ fill: "none" }}
-        />
-      </svg>
-      <motion.g style={{ rotate }}>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 150 100"
-          width="250"
-          height="100"
-        >
-          {/* Group for cohesive movement and rotation */}
-          <g>
-            {/* < */}
-            <motion.path
-              d="M40,20 L10,50 L40,80"
-              stroke="white"
-              strokeWidth="5"
-              fill="none"
-              initial={{ x: 0 }}
-              animate={{ x: [0, 5, 0] }} // Move slightly and rotate together
-              transition={{
-                duration: 3, // Slow movement
-                ease: "easeInOut",
-                repeat: Infinity, // Infinite loop
-                repeatType: "reverse",
-              }}
-            />
-            {/* > */}
-            <motion.path
-              d="M60,20 L90,50 L60,80"
-              stroke="white"
-              strokeWidth="5"
-              fill="none"
-              initial={{ x: 0 }}
-              animate={{ x: [0, -5, 0] }} // Move slightly and rotate together
-              transition={{
-                duration: 3, // Slow movement
-                ease: "easeInOut",
-                repeat: Infinity, // Infinite loop
-                repeatType: "reverse",
-              }}
-            />
-          </g>
-        </svg>
-      </motion.g>
-    </div>
-  );
-}
+// function MoizSvg({ rotate }) {
+//   return (
+//     <div>
+//       <svg
+//         xmlns="http://www.w3.org/2000/svg"
+//         viewBox="0 0 250 100"
+//         width="250"
+//         height="100"
+//       >
+//         {/* M */}
+//         <motion.path
+//           d="M10,90 L10,10 L50,50 L90,10 L90,90"
+//           stroke="white"
+//           strokeWidth="5"
+//           variants={icon}
+//           initial="hidden"
+//           animate="visible"
+//           fill="none"
+//           style={{ fill: "none" }}
+//         />
+//         {/* O */}
+//         <motion.path
+//           d="M150,50 A20,20 0 1,1 150,49.9"
+//           stroke="white"
+//           strokeWidth="5"
+//           variants={icon}
+//           initial="hidden"
+//           animate="visible"
+//           style={{ fill: "none" }}
+//         />
+//         {/* I */}
+//         <motion.path
+//           d="M165,10 L165,90"
+//           stroke="white"
+//           strokeWidth="5"
+//           variants={icon}
+//           initial="hidden"
+//           animate="visible"
+//         />
+//         {/* Z */}
+//         <motion.path
+//           d="M190,10 L240,10 L190,90 L240,90"
+//           stroke="white"
+//           strokeWidth="5"
+//           fill="transparent"
+//           variants={icon}
+//           initial="hidden"
+//           animate="visible"
+//           style={{ fill: "none" }}
+//         />
+//       </svg>
+//       <svg
+//         xmlns="http://www.w3.org/2000/svg"
+//         viewBox="0 0 100 100"
+//         width="250"
+//         height="100"
+//       >
+//         {/* < */}
+//         <motion.path
+//           d="M40,20 L10,50 L40,80"
+//           stroke="white"
+//           strokeWidth="5"
+//           fill="none"
+//           variants={icon}
+//           initial="hidden"
+//           animate="visible"
+//           style={{ fill: "none" }}
+//         />
+//         {/* / */}
+//         {/* <motion.path
+//           d="M50,80 L90,20"
+//           stroke="white"
+//           strokeWidth="5"
+//           fill="none"
+//           variants={icon}
+//           initial="hidden"
+//           animate="visible"
+//           style={{ fill: "none" }}
+//         /> */}
+//         {/* > */}
+//         <motion.path
+//           d="M100,20 L130,50 L100,80"
+//           stroke="white"
+//           strokeWidth="5"
+//           fill="none"
+//           variants={icon}
+//           initial="hidden"
+//           animate="visible"
+//           style={{ fill: "none" }}
+//         />
+//       </svg>
+//       <motion.g style={{ rotate }}>
+//         <svg
+//           xmlns="http://www.w3.org/2000/svg"
+//           viewBox="0 0 150 100"
+//           width="250"
+//           height="100"
+//         >
+//           {/* Group for cohesive movement and rotation */}
+//           <g>
+//             {/* < */}
+//             <motion.path
+//               d="M40,20 L10,50 L40,80"
+//               stroke="white"
+//               strokeWidth="5"
+//               fill="none"
+//               initial={{ x: 0 }}
+//               animate={{ x: [0, 5, 0] }} // Move slightly and rotate together
+//               transition={{
+//                 duration: 3, // Slow movement
+//                 ease: "easeInOut",
+//                 repeat: Infinity, // Infinite loop
+//                 repeatType: "reverse",
+//               }}
+//             />
+//             {/* > */}
+//             <motion.path
+//               d="M60,20 L90,50 L60,80"
+//               stroke="white"
+//               strokeWidth="5"
+//               fill="none"
+//               initial={{ x: 0 }}
+//               animate={{ x: [0, -5, 0] }} // Move slightly and rotate together
+//               transition={{
+//                 duration: 3, // Slow movement
+//                 ease: "easeInOut",
+//                 repeat: Infinity, // Infinite loop
+//                 repeatType: "reverse",
+//               }}
+//             />
+//           </g>
+//         </svg>
+//       </motion.g>
+//     </div>
+//   );
+// }
 interface SkillCategoryProps {
   title: string;
   skills: string[];
@@ -222,8 +222,8 @@ const SkillsSection = () => {
   const { scrollYProgress } = useScroll();
   const scale = useTransform(scrollYProgress, [0, 1], [0.5, 2]);
 
-  const time = useTime();
-  const rotate = useTransform(time, [0, 1000], [0, 360], { clamp: false });
+  // const time = useTime();
+  // const rotate = useTransform(time, [0, 1000], [0, 360], { clamp: false });
 
   return (
     <section className="py-16 bg-gray-900">
