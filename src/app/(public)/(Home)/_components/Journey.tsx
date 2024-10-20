@@ -14,7 +14,7 @@ export default function JourneySection() {
       </div>
       <div className="relative">
         <HorizontalScrollCarousel />
-        <CurvyPathWithCar />
+        {/* <CurvyPathWithCar /> */}
       </div>
       <div className="flex h-48 items-center justify-center">
         <span className="font-semibold uppercase text-neutral-500">
