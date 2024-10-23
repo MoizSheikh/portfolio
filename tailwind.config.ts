@@ -22,6 +22,10 @@ const config: Config = {
         accent: "var(--accent)",
         secondaryAccent: "var(--secondaryAccent)",
         tertiaryAccent: "var(--tertiaryAccent)",
+        heading: "var(--heading)",
+        para: "var(--para)",
+        link: "var(--link)",
+        muted: "var(--muted)",
       },
       boxShadow: {
         md: "0 4px 9px 4px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",

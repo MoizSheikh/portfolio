@@ -32,60 +32,23 @@ import { ThemeProvider } from "@/app/_lib/context/ThemeController";
 import Projects from "./_components/Projects";
 import Journey from "./_components/Journey";
 import { scroll, useScroll } from "framer-motion";
+import HeroSection from "./_components/HeroSection";
 
 const Home = () => {
   // useScroll(progress => console.log(progress))
   return (
     <ThemeProvider>
-      
       <div className="min-h-screen bg-background z-0">
         <div className=" w-full m-auto text-center md:text-left text-para z-20 relative ">
           <ColorToggle />
           <div className="firstSection pb-8">
             {/* Hero Section */}
-            <section className="home-container py-4 lg:py-10 lg:mt-8 lg:mb-8 w-full bg-background text-center md:text-left flex items-center flex-col-reverse md:flex-row align-middle justify-start gap-14">
-              <div className="w-full lg:w-7/12">
-                <h1 className="text-3xl lg:text-5xl font-bold !leading-tight text-heading">
-                  Abdul Moiz Sheikh
-                </h1>
-                <div className="my-6 text-para w-full lg:w-4/5 font-light !leading-6">
-                  I am a dedicated software engineer with a focus on creating
-                  efficient and scalable web applications. With expertise in
-                  React, Next.js, and TypeScript, I thrive on solving complex
-                  challenges, optimising performance, and delivering intuitive
-                  user experiences. Whether it's building from scratch or
-                  improving legacy code, I ensure clean, maintainable, and
-                  future-proof solutions that align with business goals and user
-                  needs.
-                </div>
-                <div className="mt-10 flex flex-col md:flex-row gap-4 mx-auto justify-center md:justify-start items-center lg:items-start">
-                  <Button
-                    isPill={true}
-                    className="btn bg-primary text-white border-none font-medium w-3/5 lg:w-1/4 !h-10 min-h-10 flex space-around hover:bg-black"
-                  >
-                    <span>Get Started</span>
-                    <span className="mall">
-                      <GetStartedSvg />
-                    </span>
-                  </Button>
-                  <Button
-                    isPill={true}
-                    className="border-none font-normal w-3/5 lg:w-1/4 text-primary bg-[#D7E5E7] !h-10 min-h-10 hover:text-white"
-                    defaultColor={true}
-                    redirectsTo={"/examples"}
-                  >
-                    View Samples
-                  </Button>
-                </div>
-              </div>
-              <div className="w-full lg:w-5/12">
-                <Personalized />
-              </div>
-            </section>
+            <HeroSection />
+            <Projects />
+            Aͣb͔͑d̠ͅu̇̾͘l̍ͮ͠ ̗̭̞͂M̸̧͗̀őͧ̂͘ì̶̱͇z̵͕̈̾ ̝̰̝ͨS̡̠͂h̩ͤͮę̗i̯͋k͆hͧ
             <SkillsSection />
             <Journey />
-            <Projects />
-             {/* My journey{"\n"}// Hear from the people // future goals // You came
+            {/* My journey{"\n"}// Hear from the people // future goals // You came
             all the way, Thanks Contact me */}
           </div>
 
@@ -190,11 +153,14 @@ const Home = () => {
 
             {/* About Section */}
             <section className=" home-container py-12 lg:py-24 w-full mx-auto text-center ">
-              <h2 className="text-4xl font-bold">About Align</h2>
+              <h2 className="text-4xl font-bold">About Me</h2>
               <h3 className="mt-4 text-2xl font-medium lg:font-semibold text-primary w-full mx-auto px-2 md:px-8 ">
-                Our mission is to help individuals articulate their preferences,
-                set clear boundaries, and enhance mutual understanding through
-                customized interaction manuals.
+                A team of communication experts and AI enthusiasts, we
+                recognized the need for a tool that makes it easy for people to
+                express their needs and preferences in a clear and structured
+                way. By leveraging the power of AI, we've created a platform
+                that takes the complexity out of this process, making it
+                accessible and effective for everyone.
               </h3>
               <p className="my-4 text-gray-600 w-full mx-auto font-light">
                 Founded by a team of communication experts and AI enthusiasts,
@@ -205,19 +171,14 @@ const Home = () => {
                 accessible and effective for everyone.
               </p>
               <div className="mt-8">
-                <Button
-                  isPill={true}
-                  className="btn bg-primary px-6 font-semibold text-white border-none mx-4 min-h-10 h-10 hover:bg-black"
-                >
-                  Create Manual
-                </Button>
+               
                 <Button
                   isPill={true}
                   className="text-white border-none px-8 font-semibold min-h-10 h-10"
                   defaultColor={true}
                   redirectsTo={"/contact-us"}
                 >
-                  Contact Us
+                  Contact Me
                 </Button>
               </div>
             </section>

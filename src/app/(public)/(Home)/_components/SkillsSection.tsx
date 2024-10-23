@@ -170,17 +170,17 @@ const SkillCategory: React.FC<SkillCategoryProps> = ({
     <motion.div
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      className="card bg-gray-800    shadow-lg p-6 rounded-xl transform transition duration-300 ease-in-out hover:shadow-2xl"
+      className="card bg-transparent border border-white shadow-lg p-6 rounded-xl transform transition duration-300 ease-in-out hover:shadow-2xl"
     >
       <div className="flex items-center space-x-3 mb-4">
         {icon}
-        <h3 className="text-2xl font-bold text-white">{title}</h3>
+        <h3 className="text-2xl font-bold text-heading">{title}</h3>
       </div>
       <ul className="space-y-3 mt-3">
         {skills.map((skill, index) => (
           <li
             key={index}
-            className="badge badge-outline badge-accent text-xs text-white py-3 px-6 font-light bg-white bg-opacity-10 hover:bg-opacity-20 transition-colors duration-200"
+            className="badge badge-outline badge-accent text-xs text-heading py-3 px-6 font-light bg-background bg-opacity-10 hover:bg-opacity-20 transition-colors duration-200"
           >
             {skill}
           </li>
@@ -194,46 +194,55 @@ const SkillsSection = () => {
   const skillCategories = [
     {
       title: "Frontend Development",
-      skills: ["React", "Next.js", "TailwindCSS", "TypeScript", "DaisyUI"],
+      skills: [
+        "UI",
+        "UX",
+        "HTML",
+        "CSS",
+        "SCSS",
+        "TailwindCSS",
+        "React",
+        "Redux",
+        "Next.js",
+        "JavaScript",
+        "TypeScript",
+      ],
       icon: <FaCode className="text-white text-3xl" />,
     },
     {
       title: "Backend Development",
-      skills: ["Node.js", "Express", "NestJS", "MongoDB", "PostgreSQL"],
+      skills: [
+        "Node.js",
+        "Express",
+        "Next.js (Backend)",
+        "MongoDB",
+        "SQL",
+        "ORMS",
+      ],
       icon: <FaServer className="text-white text-3xl" />,
     },
     {
-      title: "DevOps & Tools",
-      skills: ["Docker", "Kubernetes", "CI/CD", "AWS", "Git"],
-      icon: <FaTools className="text-white text-3xl" />,
-    },
-    {
-      title: "Soft Skills",
-      skills: [
-        "Leadership",
-        "Communication",
-        "Problem Solving",
-        "Collaboration",
-      ],
+      title: "Communication & Leadership",
+      skills: ["Team Player", "Leadership", "Collaboration"],
       icon: <FaUserTie className="text-white text-3xl" />,
     },
   ];
 
   const { scrollYProgress } = useScroll();
-  const scale = useTransform(scrollYProgress, [0, 1], [0.5, 2]);
+  const scale = useTransform(scrollYProgress, [0, 1], [0.9, 2]);
 
   // const time = useTime();
   // const rotate = useTransform(time, [0, 1000], [0, 360], { clamp: false });
 
   return (
-    <section className="py-16 bg-gray-900">
+    <section className="py-16">
       {/* <MoizSvg rotate={rotate} /> */}
       <div className="container mx-auto text-center">
         <motion.h2
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-5xl font-bold text-white mb-12"
+          className="text-5xl font-bold text-heading mb-12"
         >
           My Skills
         </motion.h2>

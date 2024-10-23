@@ -1,9 +1,20 @@
-import React from 'react'
+"use Client";
+import React, { useState } from "react";
+import ProjectCard from "./ProjectCard";
 
 const Projects = () => {
-  return (
-    <div>My Work</div>
-  )
-}
+  const [selectedId, setSelectedId] = useState(false);
 
-export default Projects
+  return (
+    <div>
+      My Work
+      <div className="flex gap-4">
+        {[1, 2, 3, 4].map((el, index) => {
+          return <ProjectCard selectedId={selectedId} setSelectedId={setSelectedId} id={index}/>;
+        })}
+      </div>
+    </div>
+  );
+};
+
+export default Projects;

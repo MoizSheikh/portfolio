@@ -4,33 +4,33 @@
 
 /* :root { */
 .light {
-  --background: #f6f6f2; /* Light and neutral, ideal for backgrounds */
-  --foreground: #0a090c; /* Dark enough for text, ensuring readability */
+  --background: #edf1f2; /* Light and neutral, ideal for backgrounds */
+  --foreground: #fbfcfc; /* Dark enough for text, ensuring readability */
   --primary: #005e7c; /* Rich teal for primary buttons and elements */
   --secondary: #5eb1bf; /* Softer teal for secondary elements or background highlights */
   --tertiary: #1b1725; /* Deep purple for tertiary content or less prominent elements */
   --accent: #ff6347; /* Tomato red for important highlights, call-to-action buttons */
   --secondaryAccent: #1b1725; /* Dark purple again, used sparingly for minor accents */
   --tertiaryAccent: #5eb1bf; /* Reused soft teal for subtle accent elements like borders */
-  --heading: #0a090c; /* Dark text for headings */
-  --para: #5eb1bf; /* Soft teal for paragraph text */
-  --muted: #1b1725; /* Dark for muted text */
+  --heading: #202a2d; /* Dark text for headings */
+  --para: #546f78; /* Soft teal for paragraph text */
+  --muted: #7897a0; /* Dark for muted text */
 }
 
 /* @media (prefers-color-scheme: dark) {
   :root { */
 .dark {
-  --background: #0a090c; /* Dark background for contrast */
-  --foreground: #fffded; /* Light foreground text for readability */
+  --background: #151c1e; /* Dark background for contrast */
+  --foreground: #202a2d; /* Light foreground text for readability */
   --primary: #5eb1bf; /* Soft teal stands out against the dark background */
   --secondary: #005e7c; /* Deeper teal for secondary elements */
   --tertiary: #1b1725; /* Dark purple for subtle contrast */
   --accent: #ff6347; /* Tomato red for attention-grabbing elements */
   --secondaryAccent: #fffded; /* Light accent for minor details (invert from light theme) */
   --tertiaryAccent: #5eb1bf; /* Same soft teal for consistency */
-  --heading: #fffded; /* Light text for headings */
-  --para: #5eb1bf; /* Soft teal for paragraph text */
-  --muted: #5eb1bf; /* Soft teal for muted text */
+  --heading: #fbfcfc; /* Light text for headings */
+  --para: #d2dcdf; /* Soft teal for paragraph text */
+  --muted: #96aeb5; /* Soft teal for muted text */
 }
 /* } */
 

@@ -1,8 +1,8 @@
 "use client";
 
+import { cn } from "@/app/_lib/helpers/helpers";
 import { useRouter } from "next/navigation";
 import React from "react";
-import { twMerge } from "tailwind-merge";
 
 const defaultFn = () => {};
 type ButtonProps = {
@@ -35,14 +35,12 @@ const Button = ({
 
   return (
     <button
-      className={twMerge(
-        `btn font-light btn-${variant} ${
-          defaultColor ? "bg-slate-btn hover:bg-primary" : ""
-        }    ${isPill ? "rounded-full" : "rounded-md"} ${
-          disabled || isLoading ? "cursor-not-allowed " : ""
-        }`,
-        className
-      )}
+      className={cn(`btn font-light btn-${variant}`, className, {
+        "bg-slate-btn hover:bg-primary": defaultColor,
+        "cursor-not-allowed": disabled || isLoading,
+        "rounded-full": isPill,
+        "rounded-md": !isPill,
+      })}
       disabled={disabled}
       onClick={(e) => {
         if (!!redirectsTo) {

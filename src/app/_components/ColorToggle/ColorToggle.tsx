@@ -10,9 +10,7 @@ const ColorToggle = () => {
   const { theme, toggleTheme } = useTheme();
 
   return (
-    <div
-      className={` px-4 transition-colors bg-background`}
-    >
+    <div className={` px-4 transition-colors bg-background`}>
       <SliderToggle selected={theme} toggleTheme={toggleTheme} />
     </div>
   );
@@ -27,10 +25,7 @@ const SliderToggle = ({
 }) => {
   return (
     <div className="relative flex w-fit items-center rounded-full">
-      <button
-        className={`${TOGGLE_CLASSES} text-para`}
-        onClick={toggleTheme}
-      >
+      <button className={`${TOGGLE_CLASSES} text-para`} onClick={toggleTheme}>
         <FiSun className="relative z-10 text-lg md:text-sm" />
         <span className="relative z-10">Light</span>
       </button>
