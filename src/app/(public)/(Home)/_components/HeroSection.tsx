@@ -1,6 +1,8 @@
 import Button from "@/app/_components/Buttons/HomepageBtn";
 import { GetStartedSvg, Personalized } from "@/app/_lib/assets/HomepageSVG";
 import React from "react";
+import Ring from "./Ring/Ring";
+import Ring2 from "./Ring2/Ring2";
 
 const HeroSection = () => {
   return (
@@ -32,7 +34,9 @@ const HeroSection = () => {
           </div>
         </div>
         <div className="w-full lg:w-5/12">
-          <Personalized />
+          {/* <Personalized /> */}
+          {/* <Ring/>
+          <Ring2/> */}
         </div>
       </section>
     </div>

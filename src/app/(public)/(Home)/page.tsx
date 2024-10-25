@@ -33,6 +33,8 @@ import Projects from "./_components/Projects";
 import Journey from "./_components/Journey";
 import { scroll, useScroll } from "framer-motion";
 import HeroSection from "./_components/HeroSection";
+import Ring from "./_components/Ring/Ring";
+import Ring2 from "./_components/Ring2/Ring2";
 
 const Home = () => {
   // useScroll(progress => console.log(progress))
@@ -41,9 +43,12 @@ const Home = () => {
       <div className="min-h-screen bg-background z-0">
         <div className=" w-full m-auto text-center md:text-left text-para z-20 relative ">
           <ColorToggle />
+          
           <div className="firstSection pb-8">
             {/* Hero Section */}
-            <HeroSection />
+            {/* <Ring/> */}
+            <Ring2/>
+            {/* <HeroSection /> */}
             <Projects />
             Aͣb͔͑d̠ͅu̇̾͘l̍ͮ͠ ̗̭̞͂M̸̧͗̀őͧ̂͘ì̶̱͇z̵͕̈̾ ̝̰̝ͨS̡̠͂h̩ͤͮę̗i̯͋k͆hͧ
             <SkillsSection />

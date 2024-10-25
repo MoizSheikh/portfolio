@@ -5,7 +5,7 @@ import { FiAlertCircle } from "react-icons/fi";
 
 const ProjectCard = ({ selectedId, setSelectedId, id }: any) => {
   return (
-    <>
+    <div>
       <AnimatePresence>
         {selectedId && (
           <motion.div
@@ -74,7 +74,7 @@ const ProjectCard = ({ selectedId, setSelectedId, id }: any) => {
           <img src="https://via.placeholder.com/150" alt="project" />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
