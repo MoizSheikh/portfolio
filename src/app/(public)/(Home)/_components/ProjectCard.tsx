@@ -1,9 +1,18 @@
 "use client";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 import React, { useState } from "react";
 import { FiAlertCircle } from "react-icons/fi";
 
-const ProjectCard = ({ selectedId, setSelectedId, id }: any) => {
+const ProjectCard = ({
+  selectedId,
+  setSelectedId,
+  id,
+}: {
+  selectedId: number;
+  setSelectedId: (id: number) => void;
+  id: number;
+}) => {
   return (
     <>
       <AnimatePresence>
@@ -12,7 +21,7 @@ const ProjectCard = ({ selectedId, setSelectedId, id }: any) => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            onClick={() => setSelectedId(false)}
+            onClick={() => setSelectedId(0)}
             className="bg-slate-900/20 backdrop-blur p-8 fixed inset-0 z-50 grid place-items-center overflow-y-scroll cursor-pointer"
           >
             <motion.div
@@ -36,13 +45,13 @@ const ProjectCard = ({ selectedId, setSelectedId, id }: any) => {
                 </p>
                 <div className="flex gap-2">
                   <button
-                    onClick={() => setSelectedId(false)}
+                    onClick={() => setSelectedId(0)}
                     className="bg-transparent hover:bg-white/10 transition-colors text-white font-semibold w-full py-2 rounded"
                   >
                     Nah, go back
                   </button>
                   <button
-                    onClick={() => setSelectedId(false)}
+                    onClick={() => setSelectedId(0)}
                     className="bg-white hover:opacity-90 transition-opacity text-indigo-600 font-semibold w-full py-2 rounded"
                   >
                     Understood!
@@ -71,7 +80,12 @@ const ProjectCard = ({ selectedId, setSelectedId, id }: any) => {
          
          hover:-rotate-2 "
         >
-          <img src="https://via.placeholder.com/150" alt="project" />
+          <Image
+            src="https://via.placeholder.com/150"
+            alt="project"
+            width={100}
+            height={100}
+          />
         </div>
       </div>
     </>
