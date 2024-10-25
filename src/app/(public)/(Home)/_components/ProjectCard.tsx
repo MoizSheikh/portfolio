@@ -81,7 +81,7 @@ const ProjectCard = ({
          hover:-rotate-2 "
         >
           <Image
-            src="https://via.placeholder.com/150"
+            src="/projCar.png"
             alt="project"
             width={100}
             height={100}
