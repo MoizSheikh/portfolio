@@ -35,12 +35,13 @@ const Button = ({
 
   return (
     <button
-      className={cn(`btn font-light btn-${variant}`, className, {
-        "bg-slate-btn hover:bg-primary": defaultColor,
+      className={cn(`btn bg-btn font-light btn-${variant}`, className, {
+        "bg-btn hover:bg-btn-hover": defaultColor,
         "cursor-not-allowed": disabled || isLoading,
         "rounded-full": isPill,
         "rounded-md": !isPill,
       })}
+      // className="btn bg-btn"
       disabled={disabled}
       onClick={(e) => {
         if (!!redirectsTo) {

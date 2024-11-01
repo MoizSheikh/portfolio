@@ -26,6 +26,12 @@ const config: Config = {
         para: "var(--para)",
         link: "var(--link)",
         muted: "var(--muted)",
+
+        btn: "var(--btn)",
+        "btn-hover": "var(--btn-hover)",
+        "btn-disable": "var(--btn-disable)",
+        "btn-disable-text": "var(--btn-disable-text)",
+        "btn-active": "var(--btn-active)",
       },
       boxShadow: {
         md: "0 4px 9px 4px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",

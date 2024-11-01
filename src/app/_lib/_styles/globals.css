@@ -3,8 +3,26 @@
 @tailwind utilities;
 
 /* :root { */
+:root {
+  --primary-50: #f1f5f9;       /* Mist Grey */
+  --primary-100: #d1dce3;      /* Stone Blue */
+  --primary-200: #b0c4cf;      /* Steel Blue */
+  --primary-300: #8faab9;      /* Iron */
+  --primary-400: #6e91a5;      /* Deep Slate */
+  --primary-500: #4d778e;      /* Midnight Teal */
+  --primary-600: #365d71;      /* Ocean Deep */
+  --primary-700: #27495c;      /* Shadow Blue */
+  --primary-800: #1b3445;      /* Charcoal */
+  --primary-900: #111f2f;      /* Obsidian */
+  --primary-950: #0a141e;      /* Ink Black */
+
+  --darkBg: #4b556380
+}
+
+
+
 .light {
-  --background: #edf1f2; /* Light and neutral, ideal for backgrounds */
+  --background: #fff; /* Light and neutral, ideal for backgrounds */
   --foreground: #fbfcfc; /* Dark enough for text, ensuring readability */
   --primary: #005e7c; /* Rich teal for primary buttons and elements */
   --secondary: #5eb1bf; /* Softer teal for secondary elements or background highlights */
@@ -12,9 +30,21 @@
   --accent: #ff6347; /* Tomato red for important highlights, call-to-action buttons */
   --secondaryAccent: #1b1725; /* Dark purple again, used sparingly for minor accents */
   --tertiaryAccent: #5eb1bf; /* Reused soft teal for subtle accent elements like borders */
-  --heading: #202a2d; /* Dark text for headings */
-  --para: #546f78; /* Soft teal for paragraph text */
+ 
   --muted: #7897a0; /* Dark for muted text */
+
+  --btn: var(--primary-500);
+  --btn-hover: var(--primary-600);
+  --btn-active: var(--primary-700);
+  --btn-disable: var(--primary-100);
+  --btn-text-disable: var(--primary-400);
+  --border: var(--primary-600);
+  --para: var(--primary-950);
+  --heading: var(--primary-950);
+
+  --accent: var(--primary-600);
+
+
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -25,12 +55,21 @@
   --primary: #5eb1bf; /* Soft teal stands out against the dark background */
   --secondary: #005e7c; /* Deeper teal for secondary elements */
   --tertiary: #1b1725; /* Dark purple for subtle contrast */
-  --accent: #ff6347; /* Tomato red for attention-grabbing elements */
   --secondaryAccent: #fffded; /* Light accent for minor details (invert from light theme) */
   --tertiaryAccent: #5eb1bf; /* Same soft teal for consistency */
   --heading: #fbfcfc; /* Light text for headings */
-  --para: #d2dcdf; /* Soft teal for paragraph text */
+  
   --muted: #96aeb5; /* Soft teal for muted text */
+
+  --btn: var(--primary-500);
+  --btn-hover: var(--primary-600);
+  --btn-active: var(--primary-700);
+  --btn-disable: var(--primary-900);
+  --btn-text-disable: var(--primary-700);
+  --border: var(--primary-600);
+  --para: var(--primary-50);
+  --heading: var(--primary-50);
+  --accent: var(--primary-600);
 }
 /* } */
 

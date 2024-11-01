@@ -80,7 +80,7 @@ const CurvyPathWithCar = () => {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          {/* Motion path used here */}
+        
           <motion.path
             id="wavyPath" // Assign an id for reference
             d="M0 50 Q 500 150 1000 50 T 2000 50 T 3000 50 T 4000 50"
