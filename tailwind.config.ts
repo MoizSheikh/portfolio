@@ -52,6 +52,7 @@ const config: Config = {
     },
   },
   plugins: [require("daisyui")],
+  transpilePackages: ['three'],
   // darkMode:"class",
 };
 export default config;
