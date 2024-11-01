@@ -1,48 +1,24 @@
 "use client";
 import {
-  Personalized,
-  Step1svg,
-  GetStartedSvg,
-  Step2svg,
-  Step3svg,
-  Linkdinsvg,
-  Commasvg,
-  CheckMarkSvg,
-  Icon1Svg,
-  Icon2Svg,
-  Icon3Svg,
-  Icon4Svg,
-  Icon5Svg,
-  PersonalizedCommunicationSvg,
-  Benefit1Svg,
-  Benefit2Svg,
-  Benefit3Svg,
-  Benefit4Svg,
-  Benefit5Svg,
-  Benefit6Svg,
+  PersonalizedCommunicationSvg
 } from "@/app/_lib/assets/HomepageSVG";
 import Button from "@/app/_components/Buttons/HomepageBtn";
-import Image from "next/image";
 import Testimonial from "./_components/Testimonial";
-import FAQSection from "./_components/Faq";
-import PricingPlans from "./_components/PricingPlans";
 import SkillsSection from "./_components/SkillsSection";
 import ColorToggle from "@/app/_components/ColorToggle/ColorToggle";
 import { ThemeProvider } from "@/app/_lib/context/ThemeController";
 import Projects from "./_components/Projects";
 import Journey from "./_components/Journey";
-import { scroll, useScroll } from "framer-motion";
 import HeroSection from "./_components/HeroSection";
 import AboutMe from "./_components/AboutMe";
 import { NameHero } from "./_components/NameHero/NameHero";
 
 const Home = () => {
-  // useScroll(progress => console.log(progress))
   return (
     <ThemeProvider>
       <div className="min-h-screen bg-background z-0">
-        <div className=" w-full m-auto text-center md:text-left text-para z-20 relative ">
           <ColorToggle />
+        <div className=" w-full m-auto text-center md:text-left text-para z-20 relative ">
           <div className=" pb-8">
             <NameHero />
             Aͣb͔͑d̠ͅu̇̾͘l̍ͮ͠ ̗̭̞͂M̸̧͗̀őͧ̂͘ì̶̱͇z̵͕̈̾ ̝̰̝ͨS̡̠͂h̩ͤͮę̗i̯͋k͆hͧ
