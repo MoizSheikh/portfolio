@@ -1,7 +1,5 @@
 "use client";
-import {
-  PersonalizedCommunicationSvg
-} from "@/app/_lib/assets/HomepageSVG";
+import { PersonalizedCommunicationSvg } from "@/app/_lib/assets/HomepageSVG";
 import Button from "@/app/_components/Buttons/HomepageBtn";
 import Testimonial from "./_components/Testimonial";
 import SkillsSection from "./_components/SkillsSection";
@@ -12,18 +10,29 @@ import Journey from "./_components/Journey";
 import HeroSection from "./_components/HeroSection";
 import AboutMe from "./_components/AboutMe";
 import { NameHero } from "./_components/NameHero/NameHero";
+import { useScroll, useSpring, motion, MotionValue, useTransform } from "framer-motion";
+import { useRef } from "react";
 
 const Home = () => {
+  // const { scrollYProgress } = useScroll();
+  // const scaleX = useSpring(scrollYProgress, {
+  //   stiffness: 100,
+  //   damping: 30,
+  //   restDelta: 0.001,
+  // });
+ 
   return (
     <ThemeProvider>
       <div className="min-h-screen bg-background z-0">
-          <ColorToggle />
+        <ColorToggle />
         <div className=" w-full m-auto text-center md:text-left text-para z-20 relative ">
           <div className=" pb-8">
             <NameHero />
-            Aͣb͔͑d̠ͅu̇̾͘l̍ͮ͠ ̗̭̞͂M̸̧͗̀őͧ̂͘ì̶̱͇z̵͕̈̾ ̝̰̝ͨS̡̠͂h̩ͤͮę̗i̯͋k͆hͧ
-            <HeroSection />
-            <SkillsSection />
+            {/* Aͣb͔͑d̠ͅu̇̾͘l̍ͮ͠ ̗̭̞͂M̸̧͗̀őͧ̂͘ì̶̱͇z̵͕̈̾ ̝̰̝ͨS̡̠͂h̩ͤͮę̗i̯͋k͆hͧ */}
+            {/* <motion.div> */}
+              {/* <HeroSection /> */}
+              <SkillsSection />
+            {/* </motion.div> */}
             <Projects />
             <Journey />
             {/*Hear from the people // future goals // You came
@@ -31,7 +40,7 @@ const Home = () => {
           </div>
 
           {/* Personalized Communication */}
-          <section className="homepPageFullCard home-container py-4 lg:py-10 text-center md:text-left flex flex-col lg:flex-row items-center justify-center lg:justify-between w-full">
+          {/* <section className="homepPageFullCard home-container py-4 lg:py-10 text-center md:text-left flex flex-col lg:flex-row items-center justify-center lg:justify-between w-full">
             <div className="w-10/12 md:w-5/12">
               <PersonalizedCommunicationSvg />
             </div>
@@ -54,15 +63,12 @@ const Home = () => {
                 Make My Manual
               </Button>
             </div>
-          </section>
+          </section> */}
 
-          <div className=" pb-6 lg:pb-20 ">
-            {/* <PricingPlans /> */}
-          </div>
+          <div className=" pb-6 lg:pb-20 ">{/* <PricingPlans /> */}</div>
 
-          <Testimonial />
-          <div className="thirdSection">
-            {/* <FAQSection /> */}
+          {/* <Testimonial /> */}
+          <div className="">
             <AboutMe />
           </div>
         </div>

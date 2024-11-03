@@ -47,10 +47,10 @@ const JourneyCard = ({
       className="group relative h-[450px] w-[450px] overflow-hidden bg-neutral-200"
     >
       <div className="absolute inset-0 z-10 grid place-content-center">
-        <p className="bg-gradient-to-br from-white/20 to-white/0 p-8 text-6xl font-black uppercase text-white backdrop-blur-lg">
+        <p className="bg-gradient-to-br from-white/20 to-white/0 p-8 text-6xl font-black uppercase text-heading backdrop-blur-lg">
           {data.title}
         </p>
-        <p className="text-lg text-white">{data.description}</p>
+        <p className="text-lg text-para">{data.description}</p>
       </div>
     </div>
   );
@@ -80,7 +80,6 @@ const CurvyPathWithCar = () => {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-        
           <motion.path
             id="wavyPath" // Assign an id for reference
             d="M0 50 Q 500 150 1000 50 T 2000 50 T 3000 50 T 4000 50"
@@ -105,12 +104,28 @@ const CurvyPathWithCar = () => {
 
 // Simulate the journeyData
 const journeyData = [
-  { id: 1, title: "University", description: "Learned the basics of coding." },
-  { id: 2, title: "UI Dev", description: "Mastered frontend technologies." },
-  { id: 3, title: "Lyftron", description: "Worked with databases." },
+  {
+    id: 1,
+    title: "University",
+    description:
+      "Developed a foundation in programming and algorithms, igniting a passion for problem-solving and software design. Built early projects that laid the groundwork for a career in tech.",
+  },
+  {
+    id: 2,
+    title: "Freelancer",
+    description:
+      "Dived into real-world projects, working directly with clients and learning to adapt quickly. Gained hands-on experience in delivering solutions, managing deadlines, and sharpening front-end and back-end skills.",
+  },
+  {
+    id: 3,
+    title: "Lyftron",
+    description:
+      "Transitioned to full-stack development, collaborating across teams on complex applications. Contributed to scalable solutions while deepening expertise in React and backend architecture.",
+  },
   {
     id: 4,
     title: "Dubizzle",
-    description: "Advanced in React and full-stack.",
+    description:
+      "Advanced skills in React and modern full-stack technologies. Took on leadership roles, managing team sprints and coordinating projects to deliver high-impact features on schedule.",
   },
 ];

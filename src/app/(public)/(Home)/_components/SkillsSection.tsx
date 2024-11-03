@@ -1,8 +1,9 @@
 // src/components/SkillsSection.tsx
 "use client";
-import React from "react";
-import { FaCode, FaServer, FaTools, FaUserTie } from "react-icons/fa"; // Importing Icons
-import { motion, useScroll, useTime, useTransform } from "framer-motion"; // For animations
+import { motion, MotionValue, useScroll, useTransform } from "framer-motion"; // For animations
+import Image from "next/image";
+import Link from "next/link";
+import { useRef } from "react";
 
 // const icon = {
 //   hidden: {
@@ -161,108 +162,111 @@ interface SkillCategoryProps {
   icon: JSX.Element;
 }
 
-const SkillCategory: React.FC<SkillCategoryProps> = ({
-  title,
-  skills,
-  icon,
-}) => {
-  return (
-    <motion.div
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
-      className="card bg-transparent border border-white shadow-lg p-6 rounded-xl transform transition duration-300 ease-in-out hover:shadow-2xl"
-    >
-      <div className="flex items-center space-x-3 mb-4">
-        {icon}
-        <h3 className="text-2xl font-bold text-heading">{title}</h3>
-      </div>
-      <ul className="space-y-3 mt-3">
-        {skills.map((skill, index) => (
-          <li
-            key={index}
-            className="badge badge-outline badge-accent text-xs text-heading py-3 px-6 font-light bg-background bg-opacity-10 hover:bg-opacity-20 transition-colors duration-200"
-          >
-            {skill}
-          </li>
-        ))}
-      </ul>
-    </motion.div>
-  );
-};
+const skills = [
+  { name: "HTML", icon: "/icons/html.svg", color: "#E34F26" },
+  { name: "CSS", icon: "/icons/css.svg", color: "#1572B6" },
+  { name: "SCSS", icon: "/icons/sass.svg", color: "#CC6699" },
+  { name: "TailwindCSS", icon: "/icons/tailwind.svg", color: "#38B2AC" },
+  { name: "JavaScript", icon: "/icons/js.svg", color: "#F7DF1E" },
+  { name: "TypeScript", icon: "/icons/ts.svg", color: "#3178C6" },
+  { name: "React", icon: "/icons/react.svg", color: "#61DAFB" },
+  { name: "Redux", icon: "/icons/redux.svg", color: "#764ABC" },
+  { name: "Next.js", icon: "/icons/next.svg", color: "#000000" },
+  { name: "Node.js", icon: "/icons/node.svg", color: "#339933" },
+  { name: "Express", icon: "/icons/express.svg", color: "#000000" },
+  { name: "MongoDB", icon: "/icons/mongodb.svg", color: "#47A248" },
+  { name: "SQL", icon: "/icons/mysql.svg", color: "#1572B6" },
+  { name: "PostGres", icon: "/icons/postgres.svg", color: "#1572B6" },
+  { name: "Git", icon: "/icons/git.svg", color: "#F05032" },
+  { name: "Vite", icon: "/icons/vite.svg", color: "#646CFF" },
+  { name: "UI UX", icon: "/icons/ui.svg", color: "#61DAFB" },
+  { name: "Team Player", icon: "/icons/leadership.svg", color: "#F7DF1E" },
+];
 
 const SkillsSection = () => {
-  const skillCategories = [
-    {
-      title: "Frontend Development",
-      skills: [
-        "UI",
-        "UX",
-        "HTML",
-        "CSS",
-        "SCSS",
-        "TailwindCSS",
-        "React",
-        "Redux",
-        "Next.js",
-        "JavaScript",
-        "TypeScript",
-      ],
-      icon: <FaCode className="text-white text-3xl" />,
-    },
-    {
-      title: "Backend Development",
-      skills: [
-        "Node.js",
-        "Express",
-        "Next.js (Backend)",
-        "MongoDB",
-        "SQL",
-        "ORMS",
-      ],
-      icon: <FaServer className="text-white text-3xl" />,
-    },
-    {
-      title: "Communication & Leadership",
-      skills: ["Team Player", "Leadership", "Collaboration"],
-      icon: <FaUserTie className="text-white text-3xl" />,
-    },
-  ];
+  // const { scrollYProgress } = useScroll();
+  // const scale = useTransform(scrollYProgress, [0, 1], [0.9, 2]);
+  function useParallax(value: MotionValue<number>, distance: number) {
+    return useTransform(value, [0, 1], [-distance, distance]);
+  }
+  const ref = useRef(null);
 
-  const { scrollYProgress } = useScroll();
-  const scale = useTransform(scrollYProgress, [0, 1], [0.9, 2]);
-
+  const { scrollYProgress } = useScroll({ target: ref });
+  const y = useParallax(scrollYProgress, 200);
   // const time = useTime();
   // const rotate = useTransform(time, [0, 1000], [0, 360], { clamp: false });
 
   return (
     <section className="py-16">
       {/* <MoizSvg rotate={rotate} /> */}
-      <div className="container mx-auto text-center">
+      <section className="home-container py-4 w-full bg-background text-center md:text-left flex items-center flex-col-reverse md:flex-row align-middle justify-start gap-14">
+        <motion.div className="w-full lg:w-7/12">
+          <div className="my-6 text-para w-full lg:w-4/5 font-light !leading-6">
+            I am a dedicated software engineer with a focus on creating
+            efficient and scalable web applications. With expertise in React,
+            Next.js, and TypeScript, I thrive on solving complex challenges,
+            optimising performance, and delivering intuitive user experiences.
+            Whether it's building from scratch or improving legacy code, I
+            ensure clean, maintainable, and future-proof solutions that align
+            with business goals and user needs.
+          </div>
+          <div className="mt-10 flex flex-col md:flex-row gap-4 mx-auto justify-center md:justify-start items-center lg:items-start"></div>
+        </motion.div>
+        <div className="w-full lg:w-5/12 flex space-x-4">
+          <Link href="https://github.com/moizsheikh" target="_blank">
+            <Image
+              src="/icons/github.svg"
+              alt="GitHub Profile"
+              width={50}
+              height={50}
+            />
+          </Link>
+          <Link href="https://linkedin.com/in/moizsheikhh" target="_blank">
+            <Image
+              src="/icons/linkedin.svg"
+              alt="LinkedIn Profile"
+              width={50}
+              height={50}
+            />
+          </Link>
+        </div>
+      </section>
+      <motion.div className="container mx-auto text-center ">
         <motion.h2
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-5xl font-bold text-heading mb-12"
+          className="text-5xl font-bold text-white mb-12"
         >
-          My Skills
+          Skills
         </motion.h2>
+
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10"
-          style={{ scale }}
+          className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6"
+
         >
-          {skillCategories.map((category, index) => (
-            <SkillCategory
+          {skills.map((skill, index) => (
+            <motion.div
               key={index}
-              title={category.title}
-              skills={category.skills}
-              icon={category.icon}
-            />
+              whileHover={{
+                boxShadow: `0 0 15px ${skill.color}`,
+                transition: { duration: 1, ease: "easeOut" },
+              }}
+              className="flex items-center justify-center p-4 bg-gray-800 rounded-lg transition"
+              style={{
+                boxShadow: "0 0 0px transparent",
+                border: "1px solid rgba(90,90,90,.7)",
+                // transition: ".0s ease-in-out 0.3s"
+              }} // Start with no shadow
+            >
+              <Image src={skill.icon} alt={skill.name} width={64} height={64} />
+            </motion.div>
           ))}
         </motion.div>
-      </div>
+      </motion.div>
     </section>
   );
 };

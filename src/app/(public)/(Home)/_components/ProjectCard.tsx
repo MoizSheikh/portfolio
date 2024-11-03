@@ -8,10 +8,18 @@ const ProjectCard = ({
   selectedId,
   setSelectedId,
   id,
+  name,
+  description,
+  techStack,
+  img,
 }: {
   selectedId: number;
   setSelectedId: (id: number) => void;
   id: number;
+  name: string;
+  description: string;
+  techStack: string[];
+  img: string;
 }) => {
   return (
     <>
@@ -63,28 +71,28 @@ const ProjectCard = ({
         )}
       </AnimatePresence>
       <div
-        className="bg-foreground relative overflow-hidden"
+        className="bg-gray-800 relative overflow-hidden rounded p-4"
         onClick={() => {
           setSelectedId(id);
         }}
       >
         <div className="w-7/12">
-          <h4>Align</h4>
+          <h4>{name}</h4>
           <p>
-            Created the whole project from start and did client communicatoin
+            {description}
           </p>
-          <p>Technologies used: React, Node, Express, MongoDB</p>
+          <p>Technologies used: {techStack.join(", ")}</p>
         </div>
         <div
-          className="w-5/12 absolute -right-5 -bottom-8
+          className=" absolute -right-5 -bottom-8
          
          hover:-rotate-2 "
         >
           <Image
             src="/projCar.png"
             alt="project"
-            width={100}
-            height={100}
+            width={200}
+            height={200}
           />
         </div>
       </div>
