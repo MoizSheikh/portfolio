@@ -39,7 +39,7 @@
   --btn-disable: var(--primary-100);
   --btn-text-disable: var(--primary-400);
   --border: var(--primary-600);
-  --para: var(--primary-950);
+  --para: #333333;
   --heading: var(--primary-950);
 
   --accent: var(--primary-600);
@@ -50,7 +50,7 @@
 /* @media (prefers-color-scheme: dark) {
   :root { */
 .dark {
-  --background: #151c1e; /* Dark background for contrast */
+  --background: #1A1F26; /* Dark background for contrast */
   --foreground: #202a2d; /* Light foreground text for readability */
   --primary: #5eb1bf; /* Soft teal stands out against the dark background */
   --secondary: #005e7c; /* Deeper teal for secondary elements */

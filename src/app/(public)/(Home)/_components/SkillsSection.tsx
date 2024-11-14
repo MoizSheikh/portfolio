@@ -199,9 +199,9 @@ const SkillsSection = () => {
   return (
     <section className="py-16">
       {/* <MoizSvg rotate={rotate} /> */}
-      <section className="home-container py-4 w-full bg-background text-center md:text-left flex items-center flex-col-reverse md:flex-row align-middle justify-start gap-14">
+      <section id={"hero-section"}className="home-container py-4 w-full bg-background text-center md:text-left flex items-center flex-col-reverse md:flex-row align-middle justify-start gap-14">
         <motion.div className="w-full lg:w-7/12">
-          <div className="my-6 text-para w-full lg:w-4/5 font-light !leading-6">
+          <p className="my-6 text-para w-full lg:w-4/5 font-medium !leading-6">
             I am a dedicated software engineer with a focus on creating
             efficient and scalable web applications. With expertise in React,
             Next.js, and TypeScript, I thrive on solving complex challenges,
@@ -209,7 +209,7 @@ const SkillsSection = () => {
             Whether it's building from scratch or improving legacy code, I
             ensure clean, maintainable, and future-proof solutions that align
             with business goals and user needs.
-          </div>
+          </p>
           <div className="mt-10 flex flex-col md:flex-row gap-4 mx-auto justify-center md:justify-start items-center lg:items-start"></div>
         </motion.div>
         <div className="w-full lg:w-5/12 flex space-x-4">
@@ -236,7 +236,7 @@ const SkillsSection = () => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-5xl font-bold text-white mb-12"
+          className="text-5xl font-bold text-heading mb-12"
         >
           Skills
         </motion.h2>
@@ -255,10 +255,11 @@ const SkillsSection = () => {
                 boxShadow: `0 0 15px ${skill.color}`,
                 transition: { duration: 1, ease: "easeOut" },
               }}
-              className="flex items-center justify-center p-4 bg-gray-800 rounded-lg transition"
+              className="flex items-center justify-center p-4 bg-background rounded-lg transition"
               style={{
                 boxShadow: "0 0 0px transparent",
-                border: "1px solid rgba(90,90,90,.7)",
+              
+                
                 // transition: ".0s ease-in-out 0.3s"
               }} // Start with no shadow
             >

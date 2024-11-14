@@ -9,6 +9,7 @@ type Project = {
   description: string;
   techStack: string[];
   img: string;
+  url?: string;
 };
 const Projects = () => {
   const [selectedId, setSelectedId] = useState(0);
@@ -30,9 +31,9 @@ const Projects = () => {
     },
     {
       id: 2,
-      name: "Align",
+      name: "Align With Me",
       description:
-        "A platform that empowers better communication through personalization.",
+        "Enhance professional relationships with personalized insights. Align creates your unique user guide, helping colleagues understand your work style and preferences, and creating more harmonious connections.",
       techStack: [
         "React",
         "Node.js",
@@ -40,13 +41,22 @@ const Projects = () => {
         "MongoDB",
         "Tailwind CSS, stripe, propelAuth",
       ],
-      img: "/projCar.png",
+      img: "/alignwithme.png",
+      url: "https://alignwithme.com",
+    },
+    {
+      id: 3,
+      name: "Teachify",
+      description:
+        "An online platform for teachers to create and share lesson plans.",
+      techStack: ["React", "Node.js", "Express.js", "MongoDB", "Tailwind CSS"],
+      img: "/alignwithme.png",
     },
   ];
   return (
     <div>
-      My Work
-      <div className="flex gap-4 mx-auto w-full justify-center">
+      What I have been working on{" "}
+      <div className="flex gap-4 mx-auto  justify-center w-10/12">
         {projectsData.map((project, index) => {
           const { id, name, description, techStack, img } = project;
           return (
@@ -59,7 +69,6 @@ const Projects = () => {
               description={description}
               techStack={techStack}
               img={img}
-
             />
           );
         })}

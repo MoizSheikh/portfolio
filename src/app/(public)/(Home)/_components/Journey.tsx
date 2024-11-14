@@ -1,12 +1,13 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
 import "./styles.css"; // Assuming you have styles set up already
+import Image from "next/image";
 
 const transition = { ease: "linear" };
 
 export default function JourneySection() {
   return (
-    <div className="bg-neutral-800">
+    <div className="bg-background">
       <div className="relative">
         <HorizontalScrollCarousel />
         {/* <CurvyPathWithCar /> */}
@@ -21,10 +22,10 @@ const HorizontalScrollCarousel = () => {
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["15%", "-55%"]);
 
   return (
-    <section ref={targetRef} className="relative h-[300vh] bg-neutral-900">
+    <section ref={targetRef} className="relative h-[300vh] bg-background">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-96">
           {journeyData.map((item) => {
@@ -37,19 +38,20 @@ const HorizontalScrollCarousel = () => {
 };
 
 const JourneyCard = ({
-  data = { id: 0, title: "", description: "" },
+  data = { id: 0, title: "", description: "", logo: "" },
 }: {
-  data: { id: number; title: string; description: string };
+  data: { id: number; title: string; description: string; logo?: string };
 }) => {
   return (
     <div
       key={data.id}
-      className="group relative h-[450px] w-[450px] overflow-hidden bg-neutral-200"
+      className="group relative h-[450px] w-[450px] overflow-hidden border"
     >
       <div className="absolute inset-0 z-10 grid place-content-center">
-        <p className="bg-gradient-to-br from-white/20 to-white/0 p-8 text-6xl font-black uppercase text-heading backdrop-blur-lg">
+        <p className=" p-8 text-6xl font-black uppercase text-heading backdrop-blur-lg">
           {data.title}
         </p>
+        <Image src={data.logo || ""} alt={data.title} width={200} height={200} />
         <p className="text-lg text-para">{data.description}</p>
       </div>
     </div>
@@ -113,18 +115,21 @@ const journeyData = [
   {
     id: 2,
     title: "Freelancer",
+    logo: 'upwork.svg',
     description:
       "Dived into real-world projects, working directly with clients and learning to adapt quickly. Gained hands-on experience in delivering solutions, managing deadlines, and sharpening front-end and back-end skills.",
   },
   {
     id: 3,
     title: "Lyftron",
+    logo: "/Lyftron.jpeg",
     description:
       "Transitioned to full-stack development, collaborating across teams on complex applications. Contributed to scalable solutions while deepening expertise in React and backend architecture.",
   },
   {
     id: 4,
     title: "Dubizzle",
+    logo: "/DL.png",
     description:
       "Advanced skills in React and modern full-stack technologies. Took on leadership roles, managing team sprints and coordinating projects to deliver high-impact features on schedule.",
   },

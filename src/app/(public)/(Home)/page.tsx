@@ -1,26 +1,13 @@
 "use client";
-import { PersonalizedCommunicationSvg } from "@/app/_lib/assets/HomepageSVG";
-import Button from "@/app/_components/Buttons/HomepageBtn";
-import Testimonial from "./_components/Testimonial";
 import SkillsSection from "./_components/SkillsSection";
 import ColorToggle from "@/app/_components/ColorToggle/ColorToggle";
 import { ThemeProvider } from "@/app/_lib/context/ThemeController";
 import Projects from "./_components/Projects";
 import Journey from "./_components/Journey";
-import HeroSection from "./_components/HeroSection";
 import AboutMe from "./_components/AboutMe";
 import { NameHero } from "./_components/NameHero/NameHero";
-import { useScroll, useSpring, motion, MotionValue, useTransform } from "framer-motion";
-import { useRef } from "react";
 
 const Home = () => {
-  // const { scrollYProgress } = useScroll();
-  // const scaleX = useSpring(scrollYProgress, {
-  //   stiffness: 100,
-  //   damping: 30,
-  //   restDelta: 0.001,
-  // });
- 
   return (
     <ThemeProvider>
       <div className="min-h-screen bg-background z-0">
@@ -29,48 +16,15 @@ const Home = () => {
           <div className=" pb-8">
             <NameHero />
             {/* Aͣb͔͑d̠ͅu̇̾͘l̍ͮ͠ ̗̭̞͂M̸̧͗̀őͧ̂͘ì̶̱͇z̵͕̈̾ ̝̰̝ͨS̡̠͂h̩ͤͮę̗i̯͋k͆hͧ */}
-            {/* <motion.div> */}
-              {/* <HeroSection /> */}
-              <SkillsSection />
-            {/* </motion.div> */}
+
+            <SkillsSection />
+
             <Projects />
             <Journey />
             {/*Hear from the people // future goals // You came
             all the way, Thanks Contact me */}
           </div>
-
-          {/* Personalized Communication */}
-          {/* <section className="homepPageFullCard home-container py-4 lg:py-10 text-center md:text-left flex flex-col lg:flex-row items-center justify-center lg:justify-between w-full">
-            <div className="w-10/12 md:w-5/12">
-              <PersonalizedCommunicationSvg />
-            </div>
-            <div className="text-left lg:ml-16 flex flex-col items-center lg:items-start mt-0">
-              <h1 className="text-2xl lg:text-4xl font-bold text-primary text-center lg:text-left">
-                Empowering Better Communication Through Personalization
-              </h1>
-              <p className="text-gray-500 max-w-2xl my-7 text-center lg:text-left text-sm">
-                Founded by a team of communication experts and AI enthusiasts,
-                we recognized the need for a tool that makes it easy for people
-                to express their needs and preferences in a clear and structured
-                way. By leveraging the power of AI, we've created a platform
-                that takes the complexity out of this process, making it
-                accessible and effective for everyone.
-              </p>
-              <Button
-                isPill={true}
-                className="btn text-white border-none w-5/6 lg:w-1/4 text-base font-semibold min-h-10 h-10 hover:bg-black"
-              >
-                Make My Manual
-              </Button>
-            </div>
-          </section> */}
-
-          <div className=" pb-6 lg:pb-20 ">{/* <PricingPlans /> */}</div>
-
-          {/* <Testimonial /> */}
-          <div className="">
-            <AboutMe />
-          </div>
+          <AboutMe />
         </div>
       </div>
     </ThemeProvider>
