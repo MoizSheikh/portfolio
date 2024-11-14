@@ -22,12 +22,13 @@ const HorizontalScrollCarousel = () => {
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["15%", "-55%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["15%", "-65%"]);
 
   return (
     <section ref={targetRef} className="relative h-[300vh] bg-background">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-96">
+        {/* <motion.div style={{ x }} className="flex gap-12"> */}
           {journeyData.map((item) => {
             return <JourneyCard key={item.id} data={item} />;
           })}
@@ -45,13 +46,13 @@ const JourneyCard = ({
   return (
     <div
       key={data.id}
-      className="group relative h-[450px] w-[450px] overflow-hidden border"
+      className="group relative h-[450px] w-[450px] overflow-hidden border text-center"
     >
       <div className="absolute inset-0 z-10 grid place-content-center">
         <p className=" p-8 text-6xl font-black uppercase text-heading backdrop-blur-lg">
           {data.title}
         </p>
-        <Image src={data.logo || ""} alt={data.title} width={200} height={200} />
+        <Image src={data.logo || ""} alt={data.title} width={200} height={200} className="mx-auto"/>
         <p className="text-lg text-para">{data.description}</p>
       </div>
     </div>
@@ -109,6 +110,7 @@ const journeyData = [
   {
     id: 1,
     title: "University",
+    logo: "/university.svg",
     description:
       "Developed a foundation in programming and algorithms, igniting a passion for problem-solving and software design. Built early projects that laid the groundwork for a career in tech.",
   },

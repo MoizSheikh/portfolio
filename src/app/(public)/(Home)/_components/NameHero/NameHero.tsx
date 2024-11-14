@@ -31,18 +31,14 @@ export const NameHero = () => {
     });
   }, [color]);
 
-  const { theme, toggleTheme } = useTheme(); // Access theme and toggleTheme from context
+  const { theme } = useTheme(); // Access theme and toggleTheme from context
 
-  // const backgroundImage = useMotionTemplate`radial-gradient(125% 125% at 50% 0%,${
-  //   theme === "light" ? "#fff" : "#020617"
-  // }  50%, ${color})`;
   const percentage = theme === "light" ? "80%" : "125%";
-  const lightwhite = "rgba(255, 255, 255, 0.5)";
+  const lightwhite = "rgba(255, 255, 255, 0.9)";
   const backgroundImage = useMotionTemplate`radial-gradient(${percentage} 125% at 50% 0%,${
     theme === "light" ? lightwhite : "#020617"
   }  50%, ${color})`;
 
-  console.log("backgroundImage: ", backgroundImage);
   const scrollToNextSection = () => {
     const nextSection = document.getElementById("hero-section");
     if (nextSection) {
@@ -104,7 +100,7 @@ export const NameHero = () => {
 
       <div className="absolute inset-0 z-0">
         <Canvas>
-          <Stars radius={50} count={2500} factor={4} fade speed={2} />
+          <Stars radius={200} count={2500} factor={4} fade speed={2} />
         </Canvas>
       </div>
     </motion.section>

@@ -14,11 +14,7 @@ const AboutMe = () => {
         and user needs.
       </h3>
       <p className="my-4 text-gray-600 w-full mx-auto font-light">
-        Founded by a team of communication experts and AI enthusiasts, we
-        recognized the need for a tool that makes it easy for people to express
-        their needs and preferences in a clear and structured way. By leveraging
-        the power of AI, we've created a platform that takes the complexity out
-        of this process, making it accessible and effective for everyone.
+        Built with Next, tailwind, Framer Motion, TypeScript and love ❤️
       </p>
       <div className="mt-8">
         <Button

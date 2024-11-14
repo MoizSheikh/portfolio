@@ -199,16 +199,18 @@ const SkillsSection = () => {
   return (
     <section className="py-16">
       {/* <MoizSvg rotate={rotate} /> */}
-      <section id={"hero-section"}className="home-container py-4 w-full bg-background text-center md:text-left flex items-center flex-col-reverse md:flex-row align-middle justify-start gap-14">
+      <section
+        id={"hero-section"}
+        className="home-container py-4 w-full bg-background text-center md:text-left flex items-center flex-col-reverse md:flex-row align-middle justify-start gap-14"
+      >
         <motion.div className="w-full lg:w-7/12">
           <p className="my-6 text-para w-full lg:w-4/5 font-medium !leading-6">
-            I am a dedicated software engineer with a focus on creating
-            efficient and scalable web applications. With expertise in React,
-            Next.js, and TypeScript, I thrive on solving complex challenges,
-            optimising performance, and delivering intuitive user experiences.
-            Whether it's building from scratch or improving legacy code, I
-            ensure clean, maintainable, and future-proof solutions that align
-            with business goals and user needs.
+            I’m a dedicated software engineer with 2.5+ years in full-stack
+            development, specialising in building efficient, high-performance
+            web applications with React, Next.js, Node.js, and TypeScript. My
+            experience includes managing sprints, leading PR reviews, and
+            fostering team collaboration, ensuring technical excellence and
+            seamless project execution aligned with business goals.
           </p>
           <div className="mt-10 flex flex-col md:flex-row gap-4 mx-auto justify-center md:justify-start items-center lg:items-start"></div>
         </motion.div>
@@ -229,6 +231,17 @@ const SkillsSection = () => {
               height={50}
             />
           </Link>
+          <Link href="mailto:abdulmoizsheikhh@gmail.com">
+            <Image src="/icons/email.svg" alt="Email" width={50} height={50} />
+          </Link>
+          <a href="/resume.pdf" download="files/AMS.pdf">
+            <Image
+              src="/icons/resume.svg"
+              alt="Resume"
+              width={50}
+              height={50}
+            />
+          </a>
         </div>
       </section>
       <motion.div className="container mx-auto text-center ">
@@ -246,7 +259,6 @@ const SkillsSection = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
           className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6"
-
         >
           {skills.map((skill, index) => (
             <motion.div
@@ -258,8 +270,7 @@ const SkillsSection = () => {
               className="flex items-center justify-center p-4 bg-background rounded-lg transition"
               style={{
                 boxShadow: "0 0 0px transparent",
-              
-                
+
                 // transition: ".0s ease-in-out 0.3s"
               }} // Start with no shadow
             >

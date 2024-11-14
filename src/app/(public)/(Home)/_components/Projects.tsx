@@ -1,7 +1,6 @@
 "use Client";
-import React, { useState } from "react";
+import { useState } from "react";
 import ProjectCard from "./ProjectCard";
-import { img } from "framer-motion/client";
 
 type Project = {
   id: number;
@@ -55,7 +54,9 @@ const Projects = () => {
   ];
   return (
     <div>
-      What I have been working on{" "}
+      <h2 className="text-5xl font-bold text-heading mb-12">
+        What I have been working on
+      </h2>
       <div className="flex gap-4 mx-auto  justify-center w-10/12">
         {projectsData.map((project, index) => {
           const { id, name, description, techStack, img } = project;
