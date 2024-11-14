@@ -20,42 +20,42 @@ const HorizontalScrollCarousel = () => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
+    offset: ["start end", "end start"],
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["15%", "-65%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["35%", "-95%"]);
 
   return (
-    <section ref={targetRef} className="relative h-[300vh] bg-background">
+    <section ref={targetRef} className=" h-[300vh] bg-background">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-96">
-        {/* <motion.div style={{ x }} className="flex gap-12"> */}
-          {journeyData.map((item) => {
-            return <JourneyCard key={item.id} data={item} />;
-          })}
+          {journeyData.map((item, index) => (
+            <JourneyCard key={item.id} data={item} index={index} scrollYProgress={scrollYProgress} />
+          ))}
         </motion.div>
       </div>
     </section>
   );
 };
 
-const JourneyCard = ({
-  data = { id: 0, title: "", description: "", logo: "" },
-}: {
-  data: { id: number; title: string; description: string; logo?: string };
-}) => {
+const JourneyCard = ({ data, index, scrollYProgress }) => {
+  const scale = useTransform(scrollYProgress, [0.2 * index, 0.2 * (index + 1)], [1, 1.5]);
+  const opacity = useTransform(scrollYProgress, [0.2 * index, 0.2 * (index + 1)], [0.5, 1]);
+  const y = useTransform(scrollYProgress, [0.2 * index, 0.2 * (index + 1)], ["0%", "-20%"]);
+  
   return (
-    <div
-      key={data.id}
-      className="group relative h-[450px] w-[450px] overflow-hidden border text-center"
-    >
+    <motion.div
+      style={{ scale, opacity, y }}
+      className="group relative h-[450px] w-[450px] overflow-hidden text-center flex-shrink-0"
+      >
       <div className="absolute inset-0 z-10 grid place-content-center">
-        <p className=" p-8 text-6xl font-black uppercase text-heading backdrop-blur-lg">
+        <p className="p-8 text-6xl font-black uppercase text-heading backdrop-blur-lg">
           {data.title}
         </p>
-        <Image src={data.logo || ""} alt={data.title} width={200} height={200} className="mx-auto"/>
+        <Image src={data.logo || ""} alt={data.title} width={200} height={200} className="mx-auto" />
         <p className="text-lg text-para">{data.description}</p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
