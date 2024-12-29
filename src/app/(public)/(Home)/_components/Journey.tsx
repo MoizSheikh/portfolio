@@ -10,7 +10,7 @@ export default function JourneySection() {
     <div className="bg-background">
       <div className="relative">
         <HorizontalScrollCarousel />
-        {/* <CurvyPathWithCar /> */}
+        <CurvyPathWithCar />
       </div>
     </div>
   );
@@ -28,7 +28,6 @@ const HorizontalScrollCarousel = () => {
     <section ref={targetRef} className="relative h-[300vh] bg-background">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-96">
-        {/* <motion.div style={{ x }} className="flex gap-12"> */}
           {journeyData.map((item) => {
             return <JourneyCard key={item.id} data={item} />;
           })}
@@ -46,13 +45,21 @@ const JourneyCard = ({
   return (
     <div
       key={data.id}
-      className="group relative h-[450px] w-[450px] overflow-hidden border text-center"
+      className="group relative h-[450px] w-[450px] overflow-hidden border text-center bg-card-bg border-card-border"
     >
       <div className="absolute inset-0 z-10 grid place-content-center">
-        <p className=" p-8 text-6xl font-black uppercase text-heading backdrop-blur-lg">
-          {data.title}
-        </p>
-        <Image src={data.logo || ""} alt={data.title} width={200} height={200} className="mx-auto"/>
+        <div className="flex">
+          <p className=" p-8 text-6xl font-black uppercase text-heading backdrop-blur-lg">
+            {data.title}
+          </p>
+          <Image
+            src={data.logo || ""}
+            alt={data.title}
+            width={30}
+            height={30}
+            className="mx-auto"
+          />
+        </div>
         <p className="text-lg text-para">{data.description}</p>
       </div>
     </div>
@@ -68,7 +75,7 @@ const CurvyPathWithCar = () => {
 
   const pathLength = useTransform(scrollYProgress, [0, 1], [0, 1]);
   // const carPosition = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
-  const carPosition = useTransform(scrollYProgress, [0, 1], ["-12%", "100%"]);
+  const carPosition = useTransform(scrollYProgress, [0, 1], ["-12%", "80%"]);
 
   return (
     <section
@@ -94,7 +101,7 @@ const CurvyPathWithCar = () => {
         <motion.div
           className="box absolute left-0 top-1/2"
           style={{
-            offsetPath: `path('M0 50 Q 500 100 1000 50 T 2000 50 T 3000 50 T 4000 50')`, // Link the box to the path
+            offsetPath: `path('M0 50 Q 500 150 1000 50 T 2000 50 T 3000 50 T 4000 50')`, // Link the box to the path
             offsetDistance: carPosition, // Car moves along the path
             scale: useTransform(scrollYProgress, [0, 1], [1.5, 1]), // Optional scaling for dynamic effect
           }}
@@ -117,7 +124,7 @@ const journeyData = [
   {
     id: 2,
     title: "Freelancer",
-    logo: 'upwork.svg',
+    logo: "upwork.svg",
     description:
       "Dived into real-world projects, working directly with clients and learning to adapt quickly. Gained hands-on experience in delivering solutions, managing deadlines, and sharpening front-end and back-end skills.",
   },

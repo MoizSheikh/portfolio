@@ -25,6 +25,41 @@ const ProjectCard = ({
 }) => {
   return (
     <>
+      <div
+        className="relative flex-1 rounded-xl border border-card-border bg-card-bg flex flex-col justify-start items-end p-4"
+        onClick={() => {
+          setSelectedId(id);
+        }}
+      >
+        <div className="w-full hover:-rotate-6 hover:-translate-y-8 transition-transform duration-300">
+          <Image src={img} alt="project" width={0} height={0} style={{width:'100%', height:'200px'}}/>
+        </div>
+        <div className="w-full my-2">
+          <div className="flex items-center gap-2 w-full">
+            <h4 className="font-bold text-lg shrink-0">{name}</h4>
+            <div className="w-full h-[1px] bg-zinc-600"></div>
+            <Image
+              src={"/icons/github.svg"}
+              alt="project"
+              width={30}
+              height={30}
+            />
+            <Image
+              src={"/icons/github.svg"}
+              alt="project"
+              width={30}
+              height={30}
+            />
+          </div>
+          <p className="text-[#a3a3a3]">{techStack.join(" - ")}</p>
+          <div>
+            Some Discrpitino about it.{" "}
+            <div role="button" onClick={() => setSelectedId(id)}>
+              Learn More.
+            </div>
+          </div>
+        </div>
+      </div>
       <AnimatePresence>
         {selectedId && (
           <motion.div
@@ -32,7 +67,7 @@ const ProjectCard = ({
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setSelectedId(0)}
-            className="bg-slate-900/20 backdrop-blur p-8 fixed inset-0 z-50 grid place-items-center overflow-y-scroll cursor-pointer"
+            className="bg-slate-900/20 backdrop-blur p-8 fixed inset-0 z-50 grid place-items-center overflow-y-scroll cursor-pointer  "
           >
             <motion.div
               initial={{ scale: 0, rotate: "12.5deg" }}
@@ -47,11 +82,17 @@ const ProjectCard = ({
                   <FiAlertCircle />
                 </div> */}
                 <h3 className="text-3xl font-bold text-center mb-2">{name}</h3>
-                <Image src={img} alt="project" width={300} height={280} />
+                <Image
+                  src={img}
+                  alt="project"
+                  width={0}
+                  height={280}
+                  style={{ width: "100%" }}
+                />
 
                 <p className="text-center mb-6">{description}</p>
                 <p className="text-center mb-6 font-semibold text-lg">
-                  Technologies used: {techStack.join(", ")}
+                  {techStack.join(" - ")}
                 </p>
                 <div className="text-center mb-6">
                   <a
@@ -88,25 +129,6 @@ const ProjectCard = ({
           </motion.div>
         )}
       </AnimatePresence>
-      <div
-        className="bg-background border relative overflow-hidden rounded p-4"
-        onClick={() => {
-          setSelectedId(id);
-        }}
-      >
-        <div className="w-7/12">
-          <h4>{name}</h4>
-          {/* <p>{description}</p> */}
-          <p>Technologies used: {techStack.join(", ")}</p>
-        </div>
-        <div
-          className=" absolute -right-5 -bottom-8
-         
-         hover:-rotate-2 "
-        >
-          <Image src={img} alt="project" width={300} height={280} />
-        </div>
-      </div>
     </>
   );
 };

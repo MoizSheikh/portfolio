@@ -57,7 +57,7 @@ const Projects = () => {
       <h2 className="text-5xl font-bold text-heading mb-12">
         What I have been working on
       </h2>
-      <div className="flex gap-4 mx-auto  justify-center w-10/12">
+      <div className="flex flex-col md:flex-row gap-4 mx-auto justify-center w-10/12">
         {projectsData.map((project, index) => {
           const { id, name, description, techStack, img } = project;
           return (

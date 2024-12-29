@@ -4,22 +4,20 @@
 
 /* :root { */
 :root {
-  --primary-50: #f1f5f9;       /* Mist Grey */
-  --primary-100: #d1dce3;      /* Stone Blue */
-  --primary-200: #b0c4cf;      /* Steel Blue */
-  --primary-300: #8faab9;      /* Iron */
-  --primary-400: #6e91a5;      /* Deep Slate */
-  --primary-500: #4d778e;      /* Midnight Teal */
-  --primary-600: #365d71;      /* Ocean Deep */
-  --primary-700: #27495c;      /* Shadow Blue */
-  --primary-800: #1b3445;      /* Charcoal */
-  --primary-900: #111f2f;      /* Obsidian */
-  --primary-950: #0a141e;      /* Ink Black */
+  --primary-50: #f1f5f9; /* Mist Grey */
+  --primary-100: #d1dce3; /* Stone Blue */
+  --primary-200: #b0c4cf; /* Steel Blue */
+  --primary-300: #8faab9; /* Iron */
+  --primary-400: #6e91a5; /* Deep Slate */
+  --primary-500: #4d778e; /* Midnight Teal */
+  --primary-600: #365d71; /* Ocean Deep */
+  --primary-700: #27495c; /* Shadow Blue */
+  --primary-800: #1b3445; /* Charcoal */
+  --primary-900: #111f2f; /* Obsidian */
+  --primary-950: #0a141e; /* Ink Black */
 
-  --darkBg: #4b556380
+  --darkBg: #4b556380;
 }
-
-
 
 .light {
   --background: #fff; /* Light and neutral, ideal for backgrounds */
@@ -30,7 +28,7 @@
   --accent: #ff6347; /* Tomato red for important highlights, call-to-action buttons */
   --secondaryAccent: #1b1725; /* Dark purple again, used sparingly for minor accents */
   --tertiaryAccent: #5eb1bf; /* Reused soft teal for subtle accent elements like borders */
- 
+
   --muted: #7897a0; /* Dark for muted text */
 
   --btn: var(--primary-500);
@@ -42,15 +40,14 @@
   --para: #333333;
   --heading: var(--primary-950);
 
-  --accent: var(--primary-600);
-
-
+  --card-bg: "#141414";
+  --card-border: "rgba(38,38,38,0.7)";
 }
 
 /* @media (prefers-color-scheme: dark) {
   :root { */
 .dark {
-  --background: #1A1F26; /* Dark background for contrast */
+  --background: #101010; /* Dark background for contrast */
   --foreground: #202a2d; /* Light foreground text for readability */
   --primary: #5eb1bf; /* Soft teal stands out against the dark background */
   --secondary: #005e7c; /* Deeper teal for secondary elements */
@@ -58,7 +55,7 @@
   --secondaryAccent: #fffded; /* Light accent for minor details (invert from light theme) */
   --tertiaryAccent: #5eb1bf; /* Same soft teal for consistency */
   --heading: #fbfcfc; /* Light text for headings */
-  
+
   --muted: #96aeb5; /* Soft teal for muted text */
 
   --btn: var(--primary-500);
@@ -70,6 +67,9 @@
   --para: var(--primary-50);
   --heading: var(--primary-50);
   --accent: var(--primary-600);
+
+  --card-bg: "#141414";
+  --card-border: "rgba(38,38,38,0.7)";
 }
 /* } */
 

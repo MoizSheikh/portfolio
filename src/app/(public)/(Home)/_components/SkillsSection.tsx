@@ -1,161 +1,17 @@
 // src/components/SkillsSection.tsx
 "use client";
-import { motion, MotionValue, useScroll, useTransform } from "framer-motion"; // For animations
+import { cn } from "@/app/_lib/helpers/helpers";
+import {
+  motion,
+  MotionValue,
+  useInView,
+  useScroll,
+  useTransform,
+} from "framer-motion"; // For animations
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 
-// const icon = {
-//   hidden: {
-//     pathLength: 0,
-//     fill: "rgba(255, 255, 255, 0)",
-//   },
-//   visible: {
-//     pathLength: 1,
-//     fill: "rgba(255, 255, 255, 1)",
-//     transition: {
-//       duration: 2, // You can adjust the duration
-//       ease: "easeInOut",
-//     },
-//   },
-// };
-
-// function MoizSvg({ rotate }) {
-//   return (
-//     <div>
-//       <svg
-//         xmlns="http://www.w3.org/2000/svg"
-//         viewBox="0 0 250 100"
-//         width="250"
-//         height="100"
-//       >
-//         {/* M */}
-//         <motion.path
-//           d="M10,90 L10,10 L50,50 L90,10 L90,90"
-//           stroke="white"
-//           strokeWidth="5"
-//           variants={icon}
-//           initial="hidden"
-//           animate="visible"
-//           fill="none"
-//           style={{ fill: "none" }}
-//         />
-//         {/* O */}
-//         <motion.path
-//           d="M150,50 A20,20 0 1,1 150,49.9"
-//           stroke="white"
-//           strokeWidth="5"
-//           variants={icon}
-//           initial="hidden"
-//           animate="visible"
-//           style={{ fill: "none" }}
-//         />
-//         {/* I */}
-//         <motion.path
-//           d="M165,10 L165,90"
-//           stroke="white"
-//           strokeWidth="5"
-//           variants={icon}
-//           initial="hidden"
-//           animate="visible"
-//         />
-//         {/* Z */}
-//         <motion.path
-//           d="M190,10 L240,10 L190,90 L240,90"
-//           stroke="white"
-//           strokeWidth="5"
-//           fill="transparent"
-//           variants={icon}
-//           initial="hidden"
-//           animate="visible"
-//           style={{ fill: "none" }}
-//         />
-//       </svg>
-//       <svg
-//         xmlns="http://www.w3.org/2000/svg"
-//         viewBox="0 0 100 100"
-//         width="250"
-//         height="100"
-//       >
-//         {/* < */}
-//         <motion.path
-//           d="M40,20 L10,50 L40,80"
-//           stroke="white"
-//           strokeWidth="5"
-//           fill="none"
-//           variants={icon}
-//           initial="hidden"
-//           animate="visible"
-//           style={{ fill: "none" }}
-//         />
-//         {/* / */}
-//         {/* <motion.path
-//           d="M50,80 L90,20"
-//           stroke="white"
-//           strokeWidth="5"
-//           fill="none"
-//           variants={icon}
-//           initial="hidden"
-//           animate="visible"
-//           style={{ fill: "none" }}
-//         /> */}
-//         {/* > */}
-//         <motion.path
-//           d="M100,20 L130,50 L100,80"
-//           stroke="white"
-//           strokeWidth="5"
-//           fill="none"
-//           variants={icon}
-//           initial="hidden"
-//           animate="visible"
-//           style={{ fill: "none" }}
-//         />
-//       </svg>
-//       <motion.g style={{ rotate }}>
-//         <svg
-//           xmlns="http://www.w3.org/2000/svg"
-//           viewBox="0 0 150 100"
-//           width="250"
-//           height="100"
-//         >
-//           {/* Group for cohesive movement and rotation */}
-//           <g>
-//             {/* < */}
-//             <motion.path
-//               d="M40,20 L10,50 L40,80"
-//               stroke="white"
-//               strokeWidth="5"
-//               fill="none"
-//               initial={{ x: 0 }}
-//               animate={{ x: [0, 5, 0] }} // Move slightly and rotate together
-//               transition={{
-//                 duration: 3, // Slow movement
-//                 ease: "easeInOut",
-//                 repeat: Infinity, // Infinite loop
-//                 repeatType: "reverse",
-//               }}
-//             />
-//             {/* > */}
-//             <motion.path
-//               d="M60,20 L90,50 L60,80"
-//               stroke="white"
-//               strokeWidth="5"
-//               fill="none"
-//               initial={{ x: 0 }}
-//               animate={{ x: [0, -5, 0] }} // Move slightly and rotate together
-//               transition={{
-//                 duration: 3, // Slow movement
-//                 ease: "easeInOut",
-//                 repeat: Infinity, // Infinite loop
-//                 repeatType: "reverse",
-//               }}
-//             />
-//           </g>
-//         </svg>
-//       </motion.g>
-//     </div>
-//   );
-// }
 interface SkillCategoryProps {
   title: string;
   skills: string[];
@@ -186,35 +42,42 @@ const skills = [
 const SkillsSection = () => {
   // const { scrollYProgress } = useScroll();
   // const scale = useTransform(scrollYProgress, [0, 1], [0.9, 2]);
+  const refCard = useRef(null);
+  const isInView = useInView(refCard, { margin: "-1800px 0px -1800px 0px" }); // Adjust margins as needed
+
   function useParallax(value: MotionValue<number>, distance: number) {
     return useTransform(value, [0, 1], [-distance, distance]);
   }
   const ref = useRef(null);
 
   const { scrollYProgress } = useScroll({ target: ref });
-  const y = useParallax(scrollYProgress, 200);
+  const y = useParallax(scrollYProgress, -200);
   // const time = useTime();
-  // const rotate = useTransform(time, [0, 1000], [0, 360], { clamp: false });
 
   return (
-    <section className="py-16">
-      {/* <MoizSvg rotate={rotate} /> */}
-      <section
+    <motion.section className="py-16">
+      <h2 className="text-3xl md:text-5xl font-black text-start">About</h2>
+      <motion.section
         id={"hero-section"}
         className="home-container py-4 w-full bg-background text-center md:text-left flex items-center flex-col-reverse md:flex-row align-middle justify-start gap-14"
       >
-        <motion.div className="w-full lg:w-7/12">
+        <motion.div className="w-full ">
           <p className="my-6 text-para w-full lg:w-4/5 font-medium !leading-6">
             I’m a dedicated software engineer with 2.5+ years in full-stack
             development, specialising in building efficient, high-performance
-            web applications with React, Next.js, Node.js, and TypeScript. My
-            experience includes managing sprints, leading PR reviews, and
+            web applications with React, Next.js, Node.js, and TypeScript.
+            <br />
+            <br />
+            My experience includes managing sprints, leading PR reviews, and
             fostering team collaboration, ensuring technical excellence and
             seamless project execution aligned with business goals.
+            {/* <br />
+            Outside of work, I love to read and write. Any given Sunday you'll find
+            me filling ! */}
           </p>
           <div className="mt-10 flex flex-col md:flex-row gap-4 mx-auto justify-center md:justify-start items-center lg:items-start"></div>
         </motion.div>
-        <div className="w-full lg:w-5/12 flex space-x-4">
+        {/* <div className="w-full flex space-x-4">
           <Link href="https://github.com/moizsheikh" target="_blank">
             <Image
               src="/icons/github.svg"
@@ -242,12 +105,13 @@ const SkillsSection = () => {
               height={50}
             />
           </a>
-        </div>
-      </section>
-      <motion.div className="container mx-auto text-center ">
+        </div> */}
+      </motion.section>
+      <motion.div className="container mx-auto text-center mt-24">
         <motion.h2
           initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.5 }}
           className="text-5xl font-bold text-heading mb-12"
         >
@@ -256,30 +120,35 @@ const SkillsSection = () => {
 
         <motion.div
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
           className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6"
         >
           {skills.map((skill, index) => (
-            <motion.div
+            <div
               key={index}
-              whileHover={{
-                boxShadow: `0 0 15px ${skill.color}`,
-                transition: { duration: 1, ease: "easeOut" },
-              }}
-              className="flex items-center justify-center p-4 bg-background rounded-lg transition"
-              style={{
-                boxShadow: "0 0 0px transparent",
-
-                // transition: ".0s ease-in-out 0.3s"
-              }} // Start with no shadow
+              // whileHover={{
+              //   boxShadow: `0 0 15px ${skill.color}`,
+              //   transition: { duration: 1, ease: "easeOut" },
+              // }}
+              // transition={{ delay: 0.3 }}
+              className={cn(
+                "flex items-center justify-center p-4 bg-card-bg border border-card-border rounded-xl",
+                {
+                  "motion-translate-x-in-[-67%] motion-translate-y-in-[1%] motion-opacity-in-[10%] motion-blur-in-[20px] motion-duration-[3.50s] motion-ease-spring-snappy":
+                    isInView,
+                }
+              )}
+              // style={{
+              //   boxShadow: "0 0 0px transparent",
+              // }}
             >
               <Image src={skill.icon} alt={skill.name} width={64} height={64} />
-            </motion.div>
+            </div>
           ))}
         </motion.div>
       </motion.div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -32,6 +32,9 @@ const config: Config = {
         "btn-disable": "var(--btn-disable)",
         "btn-disable-text": "var(--btn-disable-text)",
         "btn-active": "var(--btn-active)",
+
+        "card-bg": "#141414",
+        "card-border": "rgba(38,38,38,0.7)"
       },
       boxShadow: {
         md: "0 4px 9px 4px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
@@ -51,7 +54,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("daisyui")],
+  plugins: [require("daisyui"), require('tailwindcss-motion')],
   // transpilePackages: ['three'],
   // darkMode:"class",
 };
