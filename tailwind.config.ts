@@ -8,6 +8,10 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      transitionTimingFunction: {
+        'in-expo': 'cubic-bezier(0.23, 1, 0.32, 1)',
+        'out-expo': 'cubic-bezier(0.19, 1, 0.22, 1)',
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -33,7 +37,8 @@ const config: Config = {
         "btn-disable-text": "var(--btn-disable-text)",
         "btn-active": "var(--btn-active)",
 
-        "card-bg": "#141414",
+        // "card-bg": "#141414",
+        "card-bg": "var(--card-bg)",
         "card-border": "rgba(38,38,38,0.7)"
       },
       boxShadow: {

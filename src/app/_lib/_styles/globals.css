@@ -40,8 +40,8 @@
   --para: #333333;
   --heading: var(--primary-950);
 
-  --card-bg: "#141414";
-  --card-border: "rgba(38,38,38,0.7)";
+  --card-bg: #fbfcfc;
+  --card-border: rgba(38,38,38,0.7);
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -68,8 +68,8 @@
   --heading: var(--primary-50);
   --accent: var(--primary-600);
 
-  --card-bg: "#141414";
-  --card-border: "rgba(38,38,38,0.7)";
+  --card-bg: #141414;
+  --card-border: rgba(38,38,38,0.7);
 }
 /* } */
 

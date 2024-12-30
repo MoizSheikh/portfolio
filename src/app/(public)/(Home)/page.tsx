@@ -1,5 +1,5 @@
 "use client";
-import SkillsSection from "./_components/SkillsSection";
+import SkillsSection from "./_components/Skills/SkillsSection";
 import ColorToggle from "@/app/_components/ColorToggle/ColorToggle";
 import { ThemeProvider } from "@/app/_lib/context/ThemeController";
 import Projects from "./_components/Projects";
@@ -15,12 +15,10 @@ const Home = () => {
         <div className=" w-full m-auto text-center md:text-left text-para z-20 relative ">
           <div className=" pb-8">
             <NameHero />
-            {/* Aͣb͔͑d̠ͅu̇̾͘l̍ͮ͠ ̗̭̞͂M̸̧͗̀őͧ̂͘ì̶̱͇z̵͕̈̾ ̝̰̝ͨS̡̠͂h̩ͤͮę̗i̯͋k͆hͧ */}
-
             <SkillsSection />
-
             <Projects />
             <Journey />
+            
             {/*Hear from the people // future goals // You came
             all the way, Thanks Contact me */}
           </div>

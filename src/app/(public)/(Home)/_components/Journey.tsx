@@ -10,7 +10,7 @@ export default function JourneySection() {
     <div className="bg-background">
       <div className="relative">
         <HorizontalScrollCarousel />
-        <CurvyPathWithCar />
+        {/* <CurvyPathWithCar /> */}
       </div>
     </div>
   );
