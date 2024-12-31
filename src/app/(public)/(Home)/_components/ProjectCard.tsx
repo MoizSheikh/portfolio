@@ -1,34 +1,25 @@
 "use client";
+import { Project } from "@/app/_lib/_types/genericTypes";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { FiAlertCircle } from "react-icons/fi";
 
 const ProjectCard = ({
-  selectedId,
-  setSelectedId,
-  id,
-  name,
-  description,
-  techStack,
-  img,
-  url,
+  setSelected,
+  project,
 }: {
-  selectedId: number;
-  setSelectedId: (id: number) => void;
-  id: number;
-  name: string;
-  description: string;
-  techStack: string[];
-  img: string;
-  url?: string;
+  setSelected: (data: Project) => void;
+  project: Project;
 }) => {
+  const { id, name, description, techStack, img } = project;
+
   return (
     <>
       <div
         className="relative flex-1 rounded-xl border border-card-border bg-card-bg flex flex-col justify-start items-end p-4 min-w-4/12"
         onClick={() => {
-          setSelectedId(id);
+          setSelected(project);
         }}
       >
         <div className="w-full hover:-rotate-6 hover:-translate-y-8 transition-transform duration-300">
@@ -37,6 +28,7 @@ const ProjectCard = ({
             alt="project"
             width={300}
             height={0}
+            className="object-contain"
             style={{ width: "100%", height: "200px" }}
           />
         </div>
@@ -60,13 +52,13 @@ const ProjectCard = ({
           <p className="text-[#a3a3a3]">{techStack.join(" - ")}</p>
           <div>
             Some info about it.{" "}
-            <div role="button" onClick={() => setSelectedId(id)}>
+            <div role="button" onClick={() => setSelected(project)}>
               Learn More.
             </div>
           </div>
         </div>
       </div>
-      <AnimatePresence>
+      {/* <AnimatePresence>
         {selectedId && (
           <motion.div
             initial={{ opacity: 0 }}
@@ -233,7 +225,7 @@ const ProjectCard = ({
           //   </motion.div>
           // </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
     </>
   );
 };

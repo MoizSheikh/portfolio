@@ -31,7 +31,7 @@ export const NameHero = () => {
     });
   }, [color]);
 
-  const { theme } = useTheme(); // Access theme and toggleTheme from context
+  const { theme } = useTheme();
 
   const percentage = theme === "light" ? "80%" : "125%";
   const lightwhite = "rgba(255, 255, 255, 0.9)";
@@ -57,10 +57,9 @@ export const NameHero = () => {
       className="relative grid min-h-screen place-content-center overflow-hidden bg-gray-100/10  dark:bg-gray-950 px-4 pt-40 text-gray-200"
     >
       <motion.div className="relative z-10 flex flex-col items-center">
-        <span className="mb-1.5 inline-block rounded-full bg-heading text-background px-3 py-1.5 text-sm">
-          WELCOME!
-        </span>
-        {/* <motion.h1 className="text-8xl font-extrabold bg-gradient-to-br from-white to-gray-400 bg-clip-text text-center leading-tight text-transparent sm:text-5xl sm:leading-tight md:text-8xl md:leading-tight"> */}
+          {/* <span className="mb-1.5 inline-block rounded-full bg-heading text-background px-3 py-1.5 text-sm">
+            Hi!
+          </span> */}
         <motion.h1 className="text-8xl font-extrabold bg-heading bg-clip-text text-center leading-tight text-transparent sm:text-5xl sm:leading-tight md:text-8xl md:leading-tight">
           ABDUL MOIZ SHEIKH
         </motion.h1>
@@ -70,8 +69,8 @@ export const NameHero = () => {
         <motion.div
           style={{
             y: yTransform,
-            width: "50px", // Set width here
-            height: "50px", // Set height here
+            width: "50px",
+            height: "50px",
           }}
           whileHover={{
             scale: 1.05,
@@ -80,11 +79,11 @@ export const NameHero = () => {
             scale: 0.95,
           }}
           animate={{
-            y: [0, -3, 0], // Moves up by -10px and back down
+            y: [0, -3, 0],
           }}
           transition={{
-            duration: 1.5, // Duration of one bounce cycle
-            repeat: Infinity, // Loop the animation indefinitely
+            duration: 1.5,
+            repeat: Infinity,
             ease: "easeInOut",
           }}
           className="flex w-fit items-center border-none bg-none h-28 mt-40"

@@ -94,22 +94,7 @@ const SkillsSection = () => {
           <Links />
         </motion.div>
         {/* <div className="w-full flex space-x-4">
-          <Link href="https://github.com/moizsheikh" target="_blank">
-            <Image
-              src="/icons/github.svg"
-              alt="GitHub Profile"
-              width={50}
-              height={50}
-            />
-          </Link>
-          <Link href="https://linkedin.com/in/moizsheikhh" target="_blank">
-            <Image
-              src="/icons/linkedin.svg"
-              alt="LinkedIn Profile"
-              width={50}
-              height={50}
-            />
-          </Link>
+       
           <Link href="mailto:abdulmoizsheikhh@gmail.com">
             <Image src="/icons/email.svg" alt="Email" width={50} height={50} />
           </Link>
@@ -123,7 +108,7 @@ const SkillsSection = () => {
           </a>
         </div> */}
       </motion.section>
-      <motion.div className="container mx-auto text-center mt-24">
+      <motion.div className="container mx-auto text-left mt-24">
         <motion.h2
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}

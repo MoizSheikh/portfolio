@@ -1,18 +1,24 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
-import "./styles.css"; // Assuming you have styles set up already
+import "./styles.css"; 
 import Image from "next/image";
+import { journeyData } from "@/app/_lib/assets/staticData";
 
 const transition = { ease: "linear" };
 
 export default function JourneySection() {
   return (
-    <div className="bg-background">
-      <div className="relative">
-        <HorizontalScrollCarousel />
-        {/* <CurvyPathWithCar /> */}
+    <>
+      <h2 className="py-16 w-full md:w-10/12 lg:w-9/12 xl:w-8/12 mx-auto text-5xl">
+        My Journey
+      </h2>
+      <div className="bg-background">
+        <div className="relative">
+          <HorizontalScrollCarousel />
+          {/* <CurvyPathWithCar /> */}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
@@ -112,34 +118,3 @@ const CurvyPathWithCar = () => {
   );
 };
 
-// Simulate the journeyData
-const journeyData = [
-  {
-    id: 1,
-    title: "University",
-    logo: "/university.svg",
-    description:
-      "Developed a foundation in programming and algorithms, igniting a passion for problem-solving and software design. Built early projects that laid the groundwork for a career in tech.",
-  },
-  {
-    id: 2,
-    title: "Freelancer",
-    logo: "upwork.svg",
-    description:
-      "Dived into real-world projects, working directly with clients and learning to adapt quickly. Gained hands-on experience in delivering solutions, managing deadlines, and sharpening front-end and back-end skills.",
-  },
-  {
-    id: 3,
-    title: "Lyftron",
-    logo: "/Lyftron.jpeg",
-    description:
-      "Transitioned to full-stack development, collaborating across teams on complex applications. Contributed to scalable solutions while deepening expertise in React and backend architecture.",
-  },
-  {
-    id: 4,
-    title: "Dubizzle",
-    logo: "/DL.png",
-    description:
-      "Advanced skills in React and modern full-stack technologies. Took on leadership roles, managing team sprints and coordinating projects to deliver high-impact features on schedule.",
-  },
-];

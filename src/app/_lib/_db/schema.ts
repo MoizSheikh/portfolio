@@ -4,7 +4,6 @@ enum Role {
   Admin = "admin",
   User = "user",
 }
-// const roleEnum = pgEnum('role', Object.values(Role));
 
 const timestamps = {
     updated_at: timestamp(),

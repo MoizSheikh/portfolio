@@ -1,20 +1,7 @@
 import Button from "@/app/_components/Buttons/HomepageBtn";
-import { DownArrowSVG } from "@/app/_lib/assets/HomepageSVG";
-import { motion } from "framer-motion";
 const AboutMe = () => {
   return (
     <section className=" home-container pb-12 lg:pb-24 w-full mx-auto text-center ">
-      <motion.div
-        style={{
-          width: "50px", // Set width here
-          height: "50px", // Set height here
-        }}
-      >
-        <DownArrowSVG
-          className="transition-transform group-hover:-rotate-45 group-active:-rotate-12 h-full"
-          color="black"
-        />
-      </motion.div>
       <h2 className="text-4xl font-bold">And Now</h2>
       <h3 className="mt-4 text-2xl font-medium lg:font-semibold text-para w-full mx-auto px-2 md:px-8 ">
         I am a dedicated <span className="text-primary">software engineer</span>{" "}
@@ -34,7 +21,6 @@ const AboutMe = () => {
           isPill={true}
           className="text-white border-none px-8 font-semibold min-h-10 h-10"
           defaultColor={true}
-          redirectsTo={"/contact-us"}
         >
           Contact Me
         </Button>

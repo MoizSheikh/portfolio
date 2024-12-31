@@ -37,7 +37,6 @@ const config: Config = {
         "btn-disable-text": "var(--btn-disable-text)",
         "btn-active": "var(--btn-active)",
 
-        // "card-bg": "#141414",
         "card-bg": "var(--card-bg)",
         "card-border": "rgba(38,38,38,0.7)"
       },
