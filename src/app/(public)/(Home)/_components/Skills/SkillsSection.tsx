@@ -88,10 +88,10 @@ const SkillsSection = () => {
             challenges, whether it’s implementing new features, optimizing
             performance, or refactoring legacy systems to enhance usability. My
             goal is to create innovative products that solve real-world problems
-            while delivering exceptional user experiences.
+            while delivering exceptional user experiences. 
           </p>
+            <Links />
           <div className="mt-10 flex flex-col md:flex-row gap-4 mx-auto justify-center md:justify-start items-center lg:items-start"></div>
-          <Links />
         </motion.div>
         {/* <div className="w-full flex space-x-4">
        

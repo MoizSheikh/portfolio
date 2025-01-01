@@ -60,7 +60,7 @@ export const NameHero = () => {
           {/* <span className="mb-1.5 inline-block rounded-full bg-heading text-background px-3 py-1.5 text-sm">
             Hi!
           </span> */}
-        <motion.h1 className="text-8xl font-extrabold bg-heading bg-clip-text text-center leading-tight text-transparent sm:text-5xl sm:leading-tight md:text-8xl md:leading-tight">
+        <motion.h1 className="text-xl sm:text-5xl lg:text-8xl xl:text-[130px] font-extrabold bg-heading bg-clip-text text-center leading-tight text-transparent  sm:leading-tight md:text-8xl md:leading-tight">
           ABDUL MOIZ SHEIKH
         </motion.h1>
         <p className="my-6 max-w-xl text-center text-heading leading-relaxed md:text-lg md:leading-relaxed">
