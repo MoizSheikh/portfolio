@@ -12,6 +12,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 import Links from "./helpers/Links";
+import { DotsSvg, SingleDotSvg } from "@/app/_lib/assets/HomepageSVG";
 
 interface SkillCategoryProps {
   title: string;
@@ -88,9 +89,9 @@ const SkillsSection = () => {
             challenges, whether it’s implementing new features, optimizing
             performance, or refactoring legacy systems to enhance usability. My
             goal is to create innovative products that solve real-world problems
-            while delivering exceptional user experiences. 
+            while delivering exceptional user experiences.
           </p>
-            <Links />
+          <Links />
           <div className="mt-10 flex flex-col md:flex-row gap-4 mx-auto justify-center md:justify-start items-center lg:items-start"></div>
         </motion.div>
         {/* <div className="w-full flex space-x-4">
@@ -114,9 +115,10 @@ const SkillsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-5xl font-bold text-heading mb-12"
+          className="text-5xl font-bold text-heading mb-12 flex items-baseline  "
         >
-          Skills
+          Skills{" "}
+          <SingleDotSvg />
         </motion.h2>
 
         <motion.div
