@@ -13,8 +13,8 @@ const Projects = () => {
 
   return (
     <>
-      <div className="py-16 w-full md:w-10/12 lg:w-9/12 xl:w-8/12 mx-auto">
-        <h2 className="text-5xl font-bold text-heading mb-12">
+      <div className="py-16 w-full md:w-10/12 lg:w-9/12 xl:w-8/12 mx-auto px-3 md:px-0">
+        <h2 className="text-5xl font-bold text-heading mb-12 text-left">
           Projects <span>.</span>
         </h2>
         <div className="relative">

@@ -58,7 +58,7 @@ const SkillsSection = () => {
 
   return (
     <motion.section
-      className="py-16 w-full md:w-10/12 lg:w-9/12 xl:w-8/12 mx-auto"
+      className="py-16 w-full md:w-10/12 lg:w-9/12 xl:w-8/12 mx-auto px-3 md:px-0"
       ref={ref}
     >
       <h2 className="text-3xl md:text-5xl font-black text-start">About</h2>
@@ -66,7 +66,7 @@ const SkillsSection = () => {
         id={"hero-section"}
         className="home-container py-4 w-full bg-background text-center md:text-left flex items-center flex-col-reverse md:flex-row align-middle justify-start gap-14 px-0"
       >
-        <motion.div className="w-full ">
+        <motion.div className="w-full text-left md:text-center">
           <p className="my-6 text-para w-full lg:w-4/5 font-medium !leading-6">
             I am a passionate software engineer with over 2.5 years of
             professional experience in full-stack web development. My expertise
@@ -92,40 +92,31 @@ const SkillsSection = () => {
             while delivering exceptional user experiences.
           </p>
           <Links />
-          <div className="mt-10 flex flex-col md:flex-row gap-4 mx-auto justify-center md:justify-start items-center lg:items-start"></div>
         </motion.div>
         {/* <div className="w-full flex space-x-4">
        
           <Link href="mailto:abdulmoizsheikhh@gmail.com">
             <Image src="/icons/email.svg" alt="Email" width={50} height={50} />
           </Link>
-          <a href="/resume.pdf" download="files/AMS.pdf">
-            <Image
-              src="/icons/resume.svg"
-              alt="Resume"
-              width={50}
-              height={50}
-            />
-          </a>
+       
         </div> */}
       </motion.section>
-      <motion.div className="container mx-auto text-left mt-24">
+      <motion.div className="container mx-auto text-left mt-12  md:mt-24">
         <motion.h2
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-5xl font-bold text-heading mb-12 flex items-baseline  "
+          className="text-5xl font-bold text-heading mb-6 md:mb-12 flex items-baseline "
         >
-          Skills{" "}
-          <SingleDotSvg />
+          Skills <SingleDotSvg />
         </motion.h2>
 
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
-          className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6"
+          className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6 justify-items-center"
         >
           {skills.map((skill, index) => (
             <div

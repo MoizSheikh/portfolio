@@ -3,7 +3,7 @@ const AboutMe = () => {
   return (
     <section className=" home-container pb-12 lg:pb-24 w-full mx-auto text-center ">
       <h2 className="text-4xl font-bold">And Now</h2>
-      <h3 className="mt-4 text-2xl font-medium lg:font-semibold text-para w-full mx-auto px-2 md:px-8 ">
+      <h3 className="mt-4 text-2xl font-medium lg:font-semibold text-para w-full mx-auto px-2 md:px-8 text-left md:text-center">
         I am a dedicated <span className="text-primary">software engineer</span>{" "}
         with a focus on creating efficient and scalable web applications. With
         expertise in{" "}
