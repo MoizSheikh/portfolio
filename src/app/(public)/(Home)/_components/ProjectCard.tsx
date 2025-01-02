@@ -12,7 +12,7 @@ const ProjectCard = ({
   setSelected: (data: Project) => void;
   project: Project;
 }) => {
-  const { id, name, description, techStack, img } = project;
+  const { id, name, smallDescription, techStack, img } = project;
 
   return (
     <>
@@ -49,9 +49,12 @@ const ProjectCard = ({
               height={30}
             />
           </div>
-          <p className="text-[#a3a3a3]">{techStack.join(" - ")}</p>
+          <p className="text-[#a3a3a3] overflow-hidden text-ellipsis whitespace-nowrap w-full">
+            {techStack.join(" - ")}
+          </p>
+
           <div>
-            Some info about it.{" "}
+            <p className="text-sm text-zinc-300">{smallDescription}</p>
             <div role="button" onClick={() => setSelected(project)}>
               Learn More.
             </div>
