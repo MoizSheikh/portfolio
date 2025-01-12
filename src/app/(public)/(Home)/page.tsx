@@ -18,7 +18,7 @@ const Home = () => {
             <NameHero />
             <SkillsSection />
             <Projects />
-            <Journey />
+            {/* <Journey /> */}
 
             {/*Hear from the people // future goals // You came
             all the way, Thanks Contact me */}
