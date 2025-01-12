@@ -25,7 +25,7 @@ const AboutMe = () => {
           Contact Me
         </Button>
       </div>
-      <form className="flex w-full max-w-sm items-center gap-1.5">
+      {/* <form className="flex w-full max-w-sm items-center gap-1.5">
         <input
           type="email"
           placeholder="Enter your email"
@@ -38,7 +38,7 @@ const AboutMe = () => {
           <svg
             stroke="currentColor"
             fill="none"
-            stroke-width="2"
+            strokeWidth="2"
             viewBox="0 0 24 24"
             stroke-linecap="round"
             stroke-linejoin="round"
@@ -50,7 +50,7 @@ const AboutMe = () => {
             <polyline points="22,6 12,13 2,6"></polyline>
           </svg>
         </button>
-      </form>
+      </form> */}
     </section>
   );
 };
