@@ -13,33 +13,13 @@ import Link from "next/link";
 import { useRef } from "react";
 import Links from "./helpers/Links";
 import { DotsSvg, SingleDotSvg } from "@/app/_lib/assets/HomepageSVG";
+import { MY_SKILLS } from "@/app/_lib/assets/staticData";
 
 interface SkillCategoryProps {
   title: string;
   skills: string[];
   icon: JSX.Element;
 }
-
-const skills = [
-  { name: "HTML", icon: "/icons/html.svg", color: "#E34F26" },
-  { name: "CSS", icon: "/icons/css.svg", color: "#1572B6" },
-  { name: "SCSS", icon: "/icons/sass.svg", color: "#CC6699" },
-  { name: "TailwindCSS", icon: "/icons/tailwind.svg", color: "#38B2AC" },
-  { name: "JavaScript", icon: "/icons/js.svg", color: "#F7DF1E" },
-  { name: "TypeScript", icon: "/icons/ts.svg", color: "#3178C6" },
-  { name: "React", icon: "/icons/react.svg", color: "#61DAFB" },
-  { name: "Redux", icon: "/icons/redux.svg", color: "#764ABC" },
-  { name: "Next.js", icon: "/icons/next.svg", color: "#000000" },
-  { name: "Node.js", icon: "/icons/node.svg", color: "#339933" },
-  { name: "Express", icon: "/icons/express.svg", color: "#000000" },
-  { name: "MongoDB", icon: "/icons/mongodb.svg", color: "#47A248" },
-  { name: "SQL", icon: "/icons/mysql.svg", color: "#1572B6" },
-  { name: "PostGres", icon: "/icons/postgres.svg", color: "#1572B6" },
-  { name: "Git", icon: "/icons/git.svg", color: "#F05032" },
-  { name: "Vite", icon: "/icons/vite.svg", color: "#646CFF" },
-  { name: "UI UX", icon: "/icons/ui.svg", color: "#61DAFB" },
-  { name: "Team Player", icon: "/icons/leadership.svg", color: "#F7DF1E" },
-];
 
 const SkillsSection = () => {
   // const { scrollYProgress } = useScroll();
@@ -61,13 +41,18 @@ const SkillsSection = () => {
       className="py-16 w-full md:w-10/12 lg:w-9/12 xl:w-8/12 mx-auto px-3 md:px-0"
       ref={ref}
     >
-      <h2 className="text-3xl md:text-5xl font-black text-start">About</h2>
+      <h2 className="flex items-baseline text-3xl md:text-5xl font-black text-start">
+        About
+        <span className="ml-2 text-indigo-300">
+          <SingleDotSvg />
+        </span>
+      </h2>
       <motion.section
         id={"hero-section"}
         className="home-container py-4 w-full bg-background text-center md:text-left flex items-center flex-col-reverse md:flex-row align-middle justify-start gap-14 px-0"
       >
         <motion.div className="w-full text-left md:text-center">
-          <p className="my-6 text-para w-full lg:w-4/5 font-medium !leading-6">
+          <p className="my-6 text-para w-full lg:w-4/5 font-medium !leading-6 text-left">
             I am a passionate software engineer with over 2.5 years of
             professional experience in full-stack web development. My expertise
             lies in crafting scalable, high-performance web applications using
@@ -107,9 +92,12 @@ const SkillsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-5xl font-bold text-heading mb-6 md:mb-12 flex items-baseline "
+          className=" text-5xl font-bold text-heading mb-6 md:mb-12 flex items-baseline "
         >
-          Skills <SingleDotSvg />
+          Skills{" "}
+          <span className="ml-2 text-indigo-300">
+            <SingleDotSvg />
+          </span>
         </motion.h2>
 
         <motion.div
@@ -118,7 +106,7 @@ const SkillsSection = () => {
           transition={{ delay: 0.3 }}
           className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-6 justify-items-center"
         >
-          {skills.map((skill, index) => (
+          {MY_SKILLS.map((skill, index) => (
             <div
               className="flex items-center justify-center p-4 bg-card-bg border border-card-border rounded-xl h-24 w-28"
               key={index}

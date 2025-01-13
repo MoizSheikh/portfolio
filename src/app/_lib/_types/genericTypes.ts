@@ -6,4 +6,5 @@ export type Project = {
   techStack: string[];
   img: string;
   url?: string;
+  githubLink?: string;
 };

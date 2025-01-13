@@ -21,6 +21,7 @@ export const projectsData: Project[] = [
     ],
     img: "/projects/alignwithme.png",
     url: "https://alignwithme.com",
+    githubLink: "",
   },
   {
     id: 2,
@@ -39,7 +40,8 @@ export const projectsData: Project[] = [
       "Mailgun",
       "Vercel Deployment",
     ],
-    img: "/projects/hoopworld.png", // Add a URL if applicable.
+    img: "/projects/hoopworld.png",
+    url: "https://hoopwrld.com",
   },
   {
     id: 3,
@@ -58,7 +60,7 @@ export const projectsData: Project[] = [
       "Chart.js",
     ],
     img: "/projects/glorious_me.png",
-    url: "https://wimc.com", 
+    url: "https://wimc.me",
   },
   {
     id: 4,
@@ -109,4 +111,25 @@ export const journeyData = [
     description:
       "Advanced skills in React and modern full-stack technologies. Took on leadership roles, managing team sprints and coordinating projects to deliver high-impact features on schedule.",
   },
+];
+
+export const MY_SKILLS = [
+  { name: "HTML", icon: "/icons/html.svg", color: "#E34F26" },
+  { name: "CSS", icon: "/icons/css.svg", color: "#1572B6" },
+  { name: "SCSS", icon: "/icons/sass.svg", color: "#CC6699" },
+  { name: "TailwindCSS", icon: "/icons/tailwind.svg", color: "#38B2AC" },
+  { name: "JavaScript", icon: "/icons/js.svg", color: "#F7DF1E" },
+  { name: "TypeScript", icon: "/icons/ts.svg", color: "#3178C6" },
+  { name: "React", icon: "/icons/react.svg", color: "#61DAFB" },
+  { name: "Redux", icon: "/icons/redux.svg", color: "#764ABC" },
+  { name: "Next.js", icon: "/icons/next.svg", color: "#000000" },
+  { name: "Node.js", icon: "/icons/node.svg", color: "#339933" },
+  { name: "Express", icon: "/icons/express.svg", color: "#000000" },
+  { name: "MongoDB", icon: "/icons/mongodb.svg", color: "#47A248" },
+  { name: "SQL", icon: "/icons/mysql.svg", color: "#1572B6" },
+  { name: "PostGres", icon: "/icons/postgres.svg", color: "#1572B6" },
+  { name: "Git", icon: "/icons/git.svg", color: "#F05032" },
+  { name: "Vite", icon: "/icons/vite.svg", color: "#646CFF" },
+  { name: "UI UX", icon: "/icons/ui.svg", color: "#61DAFB" },
+  { name: "Team Player", icon: "/icons/leadership.svg", color: "#F7DF1E" },
 ];
