@@ -1,4 +1,4 @@
-// context/ThemeContext.tsx
+
 import { createContext, useContext, useEffect, useState } from "react";
 
 export type Theme = "light" | "dark";

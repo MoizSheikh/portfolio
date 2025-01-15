@@ -85,6 +85,7 @@ const SkillsSection = () => {
           </Link>
        
         </div> */}
+        
       </motion.section>
       <motion.div className="container mx-auto text-left mt-12  md:mt-24">
         <motion.h2
