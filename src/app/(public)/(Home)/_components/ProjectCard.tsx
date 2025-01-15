@@ -13,7 +13,8 @@ const ProjectCard = ({
   setSelected: (data: Project) => void;
   project: Project;
 }) => {
-  const { id, name, smallDescription, techStack, img } = project;
+  const { id, name, smallDescription, techStack, img, url, githubLink } =
+    project;
 
   return (
     <>
@@ -37,17 +38,32 @@ const ProjectCard = ({
           <div className="flex items-center gap-2 w-full">
             <h4 className="font-bold text-lg shrink-0">{name}</h4>
             <div className="w-full h-[1px] bg-zinc-600"></div>
-
-            <Github size="40px" className="cursor-pointer text-xl" />
-            <ExternalLinkSVG size="40px" className="cursor-pointer" />
+            {githubLink && (
+              <Github
+                size="40px"
+                className="cursor-pointer text-xl"
+                onClick={() => window.open(githubLink, "_blank")}
+              />
+            )}
+            {url && (
+              <ExternalLinkSVG
+                size="40px"
+                className="cursor-pointer"
+                onClick={() => window.open(url, "_blank")}
+              />
+            )}
           </div>
           <p className="text-[#a3a3a3] overflow-hidden text-ellipsis whitespace-nowrap w-full">
             {techStack.join(" - ")}
           </p>
 
           <div>
-            <p className="text-sm text-zinc-300">{smallDescription}</p>
-            <div role="button" onClick={() => setSelected(project)}>
+            <p className="text-sm text-zinc-300 ">{smallDescription}</p>
+            <div
+              role="button"
+              onClick={() => setSelected(project)}
+              className="text-indigo-300"
+            >
               Learn More.
             </div>
           </div>

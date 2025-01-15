@@ -44,12 +44,10 @@
   --card-border: rgba(38,38,38,0.7);
 }
 
-/* @media (prefers-color-scheme: dark) {
-  :root { */
 .dark {
   --background: #101010; /* Dark background for contrast */
   --foreground: #202a2d; /* Light foreground text for readability */
-  --primary: #5eb1bf; /* Soft teal stands out against the dark background */
+  --primary: #7986CB; /* Soft teal stands out against the dark background */
   --secondary: #005e7c; /* Deeper teal for secondary elements */
   --tertiary: #1b1725; /* Dark purple for subtle contrast */
   --secondaryAccent: #fffded; /* Light accent for minor details (invert from light theme) */
