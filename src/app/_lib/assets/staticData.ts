@@ -5,9 +5,9 @@ export const projectsData: Project[] = [
     id: 1,
     name: "Align With Me",
     smallDescription:
-      "Streamline collaboration through personalized user guides.",
+      "“Developed an AI-powered platform enabling professionals to create personalized user guides for enhancing workplace collaboration and communication.”",
     description:
-      "Align With Me is a platform designed to enhance teamwork and communication by creating personalized user guides. These guides provide insights into individual work styles, preferences, and collaboration approaches, helping colleagues connect effectively and work harmoniously.",
+      "“Designed an AI-powered platform to create personalized user guides based on work styles, communication preferences, and professional goals. The platform enhances collaboration by helping teams and individuals understand each other better. Features include customization, team dashboards, and ongoing AI-driven guidance.”",
     techStack: [
       "Next.js",
       "MongoDB",
@@ -27,18 +27,17 @@ export const projectsData: Project[] = [
     id: 2,
     name: "HoopWorld",
     smallDescription:
-      "AI-powered training plans for aspiring basketball players.",
+      "Built an AI-driven platform providing personalized basketball assessments and actionable player development insights.",
     description:
-      "HoopWorld is an AI-driven platform designed to guide aspiring basketball players by creating personalized training plans. Players answer a series of targeted questions about their goals and routines, and HoopWorld generates customized reports and plans to maximize their growth potential.",
+      "“Developed an AI-powered basketball assessment platform that analyzes player routines, skills, and goals to generate personalized feedback and recommendations. Features include skill development, diet, fitness guidance, NBA/WNBA player comparisons, and integrated reports from coaches, parents, or friends to provide comprehensive insights.”",
     techStack: [
       "Next.js",
       "MongoDB",
-      "Tailwind CSS",
+      "Tailwind",
       "OpenAI API",
       "Zod",
       "React Hook Form",
       "Mailgun",
-      "Vercel Deployment",
     ],
     img: "/projects/hoopworld.png",
     url: "https://hoopwrld.com",
