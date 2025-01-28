@@ -59,7 +59,7 @@ export const projectsData: Project[] = [
       "Chart.js",
     ],
     img: "/projects/glorious_me.png",
-    url: "https://wimc.me",
+    url: "https://www.wimc.me",
   },
   {
     id: 4,

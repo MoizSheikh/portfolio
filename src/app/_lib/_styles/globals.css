@@ -42,6 +42,7 @@
 
   --card-bg: #fbfcfc;
   --card-border: rgba(38,38,38,0.7);
+  --muted: #000;
 }
 
 .dark {
@@ -68,6 +69,7 @@
 
   --card-bg: #141414;
   --card-border: rgba(38,38,38,0.7);
+  --muted: #d4d4d8;
 }
 /* } */
 

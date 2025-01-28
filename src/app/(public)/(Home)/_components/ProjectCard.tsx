@@ -54,7 +54,7 @@ const ProjectCard = ({
         </p>
 
         <div>
-          <p className="text-sm text-zinc-300 ">{smallDescription}</p>
+          <p className="text-sm text-muted ">{smallDescription}</p>
           <div
             role="button"
             onClick={() => setSelected(project)}
