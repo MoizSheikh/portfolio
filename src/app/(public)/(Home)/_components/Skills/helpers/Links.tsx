@@ -25,6 +25,7 @@ const Links = () => {
               target="_blank"
               rel="nofollow"
               href="https://www.linkedin.com/in/moizsheikhh"
+              aria-label="LinkedIn"
             >
               <svg
                 stroke="currentColor"
@@ -44,6 +45,7 @@ const Links = () => {
               target="_blank"
               rel="nofollow"
               href="https://www.github.com/moizsheikh"
+              aria-label="GitHub"
             >
               <svg
                 stroke="currentColor"

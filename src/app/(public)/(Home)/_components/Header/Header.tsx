@@ -9,6 +9,7 @@ const Header = () => {
           target="_blank"
           rel="nofollow"
           href="https://www.linkedin.com/in/moizsheikhh"
+          aria-label="LinkedIn"
         >
           <svg
             stroke="currentColor"
@@ -28,6 +29,7 @@ const Header = () => {
           target="_blank"
           rel="nofollow"
           href="https://www.github.com/moizsheikh"
+          aria-label="GitHub"
         >
           <svg
             stroke="currentColor"
@@ -47,6 +49,7 @@ const Header = () => {
 
       <a
       href="/files/AMS.pdf"
+      aria-label="Download Resume"
       download={true}
         className='relative z-0 cursor-pointer flex items-center gap-2 overflow-hidden rounded-md border-[1px] border-white px-4 py-2 font-medium text-sm text-white transition-all duration-300 before:absolute before:inset-0 before:-z-10 before:translate-x-[150%] before:translate-y-[150%] before:scale-[2.5] before:rounded-[100%] before:bg-white before:transition-transform before:duration-1000 before:content-[""] hover:text-zinc-950 hover:before:translate-x-[0%] hover:before:translate-y-[0%] active:scale-95'
       >

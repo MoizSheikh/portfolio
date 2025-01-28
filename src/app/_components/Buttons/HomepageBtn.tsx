@@ -32,6 +32,7 @@ const Button = ({
   redirectsTo = "",
 }: ButtonProps) => {
   const { push } = useRouter();
+  const ariaLabel = String(children) || "submit";
 
   return (
     <button
@@ -41,6 +42,7 @@ const Button = ({
         "rounded-full": isPill,
         "rounded-md": !isPill,
       })}
+      aria-label={ariaLabel}
       // className="btn bg-btn"
       disabled={disabled}
       onClick={(e) => {
