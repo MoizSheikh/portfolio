@@ -70,15 +70,15 @@ export const projectsData: Project[] = [
     techStack: ["React", "Node.js", "Express.js", "MongoDB", "SCSS", "Stripe"],
     img: "/projects/carspector.png",
   },
-  {
-    id: 5,
-    name: "Teachify",
-    description:
-      "A platform for teachers to create, share, and purchase lesson plans, similar to Fiverr but focused on education.",
-    smallDescription: "Fiverr for teachers to buy and sell lesson plans.",
-    techStack: ["React", "Node.js", "Express.js", "MongoDB", "SCSS", "Stripe"],
-    img: "/projects/alignwithme.png",
-  },
+  // {
+  //   id: 5,
+  //   name: "Teachify",
+  //   description:
+  //     "A platform for teachers to create, share, and purchase lesson plans, similar to Fiverr but focused on education.",
+  //   smallDescription: "Fiverr for teachers to buy and sell lesson plans.",
+  //   techStack: ["React", "Node.js", "Express.js", "MongoDB", "SCSS", "Stripe"],
+  //   img: "/projects/alignwithme.png",
+  // },
 ];
 
 export const journeyData = [
