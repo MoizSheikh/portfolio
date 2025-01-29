@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Project } from "@/app/_lib/_types/genericTypes";
 
+
 const ProjectModal = ({
   selectedProject,
   setSelected,
@@ -11,8 +12,10 @@ const ProjectModal = ({
   selectedProject: Project;
   setSelected: (value: Project | null) => void;
 }) => {
-  const { id, name, description, techStack, img, githubLink, url } =
+  const { name, description, techStack, img, githubLink, url } =
     selectedProject;
+
+
 
   return (
     <motion.div
