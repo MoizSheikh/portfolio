@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { Project } from "@/app/_lib/_types/genericTypes";
 
-
 const ProjectModal = ({
   selectedProject,
   setSelected,
@@ -14,8 +13,6 @@ const ProjectModal = ({
 }) => {
   const { name, description, techStack, img, githubLink, url } =
     selectedProject;
-
-
 
   return (
     <motion.div
