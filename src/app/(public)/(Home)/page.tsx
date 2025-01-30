@@ -7,6 +7,7 @@ import { NameHero } from "./_components/NameHero/NameHero";
 import Header from "./_components/Header/Header";
 import Head from "next/head";
 import Certification from "./_components/Certification/Certification";
+import Experience from "./_components/Experience/Experience";
 
 const Home = () => {
   return (
@@ -53,6 +54,7 @@ const Home = () => {
             {/*Hear from the people // future goals // You came
             all the way, Thanks Contact me */}
 
+            <Experience />
             <Certification />
           </div>
           <AboutMe />

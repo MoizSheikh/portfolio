@@ -18,3 +18,14 @@ export type Cert = {
   skills: string[];
   logo?: string;
 };
+
+export type Experience = {
+  id: number;
+  company: string;
+  role: string;
+  duration: string;
+  location: string;
+  logo?: string;
+  responsibilities: string[];
+  technologies: string[];
+};

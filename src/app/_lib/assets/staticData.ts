@@ -5,7 +5,7 @@ export const projectsData: Project[] = [
     id: 1,
     name: "Align With Me",
     smallDescription:
-      "“Developed an AI-powered platform enabling professionals to create personalized user guides for enhancing workplace collaboration and communication.”",
+      "AI platform for creating personalized user guides to enhance workplace collaboration.",
     description:
       "“Designed an AI-powered platform to create personalized user guides based on work styles, communication preferences, and professional goals. The platform enhances collaboration by helping teams and individuals understand each other better. Features include customization, team dashboards, and ongoing AI-driven guidance.”",
     techStack: [
@@ -27,7 +27,7 @@ export const projectsData: Project[] = [
     id: 2,
     name: "HoopWorld",
     smallDescription:
-      "Built an AI-driven platform providing personalized basketball assessments and actionable player development insights.",
+      "AI platform for personalized basketball assessments and player development.",
     description:
       "“Developed an AI-powered basketball assessment platform that analyzes player routines, skills, and goals to generate personalized feedback and recommendations. Features include skill development, diet, fitness guidance, NBA/WNBA player comparisons, and integrated reports from coaches, parents, or friends to provide comprehensive insights.”",
     techStack: [
@@ -187,5 +187,55 @@ export const certs: Cert[] = [
     credentialId: "57BEYX3B8JBG",
     skills: ["HTML", "CSS", "JavaScript"],
     logo: "/icons/coursera.svg",
+  },
+];
+
+export const experienceData = [
+  {
+    id: 1,
+    company: "Dubizzle Labs",
+    role: "Software Engineer",
+    duration: "Jul 2023 - Present",
+    location: "Lahore, Punjab, Pakistan",
+    logo: "/company/dubizzle.png",
+    responsibilities: [
+      "Led the development of key features across platforms including Bayut, Dubizzle, and OLX ensuring optimal performance and scalability.",
+      "Spearheaded a team to maintain high code quality, architecture standards, and streamlined deployment processes.",
+      "Improved search and filter functionalities, leading to a 20% boost in user engagement.",
+      "Refactored codebase, reducing load times by 30%.",
+      "Managed sprint planning, retrospectives, and interviews while implementing processes to enhance team productivity.",
+    ],
+    technologies: [
+      "React",
+      "Next.js",
+      "TypeScript",
+      "Redux",
+      "Node.js",
+      "MongoDB",
+      "AWS",
+    ],
+  },
+  {
+    id: 2,
+    company: "Lyftrondata",
+    role: "Software Engineer",
+    duration: "Jun 2022 - Jul 2023",
+    location: "Remote",
+    logo: "/company/lyftron.png",
+    responsibilities: [
+      "Worked across both frontend and backend, implementing new features and improving system performance.",
+      "Led the refactoring of the existing codebase, enhancing maintainability and scalability.",
+      "Onboarded new team members, leading and training a small group of developers.",
+      "Contributed to daily development tasks, code reviews, and team collaboration.",
+      "Addressed 70+ Jira tickets, including bug fixes and feature implementation.",
+    ],
+    technologies: [
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "PostgreSQL",
+      "Docker",
+    ],
   },
 ];

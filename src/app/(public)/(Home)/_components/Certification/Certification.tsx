@@ -18,7 +18,7 @@ const Certification = () => {
         {certs.map((cert: Cert) => (
           <div
             key={cert.id}
-            className="relative flex-1 rounded-xl border border-card-border bg-card-bg flex flex-col p-6 hover:border-indigo-300/50 transition-all duration-300"
+            className="relative flex-1 rounded-xl border border-card-border bg-card-bg flex flex-col p-6 hover:border-indigo-300/50 transition-all duration-300 cursor-pointer"
           >
             <div className="flex flex-col h-full">
               <div className="flex items-center justify-between mb-4">
