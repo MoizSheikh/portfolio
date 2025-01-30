@@ -197,7 +197,7 @@ export const experienceData = [
     role: "Software Engineer",
     duration: "Jul 2023 - Present",
     location: "Lahore, Punjab, Pakistan",
-    logo: "/company/dubizzle.png",
+    logo: "/DL.png",
     responsibilities: [
       "Led the development of key features across platforms including Bayut, Dubizzle, and OLX ensuring optimal performance and scalability.",
       "Spearheaded a team to maintain high code quality, architecture standards, and streamlined deployment processes.",
@@ -221,7 +221,7 @@ export const experienceData = [
     role: "Software Engineer",
     duration: "Jun 2022 - Jul 2023",
     location: "Remote",
-    logo: "/company/lyftron.png",
+    logo: "/lyftron.jpeg",
     responsibilities: [
       "Worked across both frontend and backend, implementing new features and improving system performance.",
       "Led the refactoring of the existing codebase, enhancing maintainability and scalability.",
