@@ -132,3 +132,4 @@ export const MY_SKILLS = [
   { name: "UI UX", icon: "/icons/ui.svg", color: "#61DAFB" },
   { name: "Team Player", icon: "/icons/leadership.svg", color: "#F7DF1E" },
 ];
+
