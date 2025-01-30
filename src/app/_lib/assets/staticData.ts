@@ -1,4 +1,4 @@
-import { Project } from "../_types/genericTypes";
+import { Cert, Project } from "../_types/genericTypes";
 
 export const projectsData: Project[] = [
   {
@@ -133,3 +133,59 @@ export const MY_SKILLS = [
   { name: "Team Player", icon: "/icons/leadership.svg", color: "#F7DF1E" },
 ];
 
+export const certs: Cert[] = [
+  {
+    id: 1,
+    name: "Tailwind CSS",
+    issuer: "Frontend Masters",
+    issueDate: "Dec 2024",
+    credentialId: "b7c0e2dfd3-hXdaKmozON",
+    skills: ["Cascading Style Sheets (CSS)", "Tailwind CSS", "UI/UX"],
+    logo: "/icons/frontendmasters.svg",
+  },
+  {
+    id: 2,
+    name: "The Hard Parts of UI Development",
+    issuer: "Frontend Masters",
+    issueDate: "Dec 2024",
+    credentialId: "b7c0e2dfd3-DpFXiJTXXf",
+    skills: ["HTML", "JavaScript"],
+    logo: "/icons/frontendmasters.svg",
+  },
+  {
+    id: 3,
+    name: "JavaScript: The Hard Parts",
+    issuer: "Frontend Masters",
+    issueDate: "Nov 2024",
+    credentialId: "b7c0e2dfd3-fjjCYVxYTO",
+    skills: ["JavaScript"],
+    logo: "/icons/frontendmasters.svg",
+  },
+  {
+    id: 4,
+    name: "The Hard Parts of Servers & Node.js",
+    issuer: "Frontend Masters",
+    issueDate: "Nov 2024",
+    credentialId: "b7c0e2dfd3-GuXNAjfipL",
+    skills: ["Node.js", "Server Development"],
+    logo: "/icons/frontendmasters.svg",
+  },
+  {
+    id: 5,
+    name: "Learn TypeScript",
+    issuer: "Scrimba",
+    issueDate: "Oct 2024",
+    skills: ["TypeScript"],
+    credentialId: "cert24zAwJ77fGzop3jqfm8v8Ktj8PFx88QTQoJyp",
+    logo: "/icons/scrimba.svg",
+  },
+  {
+    id: 6,
+    name: "HTML, CSS, and Javascript for Web Developers",
+    issuer: "Coursera",
+    issueDate: "Jul 2020",
+    credentialId: "57BEYX3B8JBG",
+    skills: ["HTML", "CSS", "JavaScript"],
+    logo: "/icons/coursera.svg",
+  },
+];
