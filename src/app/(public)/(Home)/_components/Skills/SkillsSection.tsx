@@ -1,4 +1,3 @@
-
 "use client";
 import { cn } from "@/app/_lib/helpers/helpers";
 import {
@@ -37,6 +36,7 @@ const SkillsSection = () => {
     <motion.section
       className="py-16 w-full md:w-10/12 lg:w-9/12 xl:w-8/12 mx-auto px-3 md:px-0"
       ref={ref}
+      id={"hero-section"}
     >
       <h2 className="flex items-baseline text-3xl md:text-5xl font-black text-start">
         About
@@ -44,10 +44,7 @@ const SkillsSection = () => {
           <SingleDotSvg />
         </span>
       </h2>
-      <motion.section
-        id={"hero-section"}
-        className="home-container py-4 w-full bg-background text-center md:text-left flex items-center flex-col-reverse md:flex-row align-middle justify-start gap-14 px-0"
-      >
+      <motion.section className="home-container py-4 w-full bg-background text-center md:text-left flex items-center flex-col-reverse md:flex-row align-middle justify-start gap-14 px-0">
         <motion.div className="w-full text-left md:text-center">
           <p className="my-6 text-para w-full lg:w-4/5 font-medium !leading-6 text-left">
             I am a passionate software engineer with over 2.5 years of
