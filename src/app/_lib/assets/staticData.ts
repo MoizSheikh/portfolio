@@ -141,7 +141,7 @@ export const certs: Cert[] = [
     issueDate: "Dec 2024",
     credentialId: "b7c0e2dfd3-hXdaKmozON",
     skills: ["Cascading Style Sheets (CSS)", "Tailwind CSS", "UI/UX"],
-    logo: "/icons/frontendmasters.svg",
+    logo: "/icons/certs/frontendmasters.jpeg",
   },
   {
     id: 2,
@@ -150,7 +150,7 @@ export const certs: Cert[] = [
     issueDate: "Dec 2024",
     credentialId: "b7c0e2dfd3-DpFXiJTXXf",
     skills: ["HTML", "JavaScript"],
-    logo: "/icons/frontendmasters.svg",
+    logo: "/icons/certs/frontendmasters.jpeg",
   },
   {
     id: 3,
@@ -159,7 +159,7 @@ export const certs: Cert[] = [
     issueDate: "Nov 2024",
     credentialId: "b7c0e2dfd3-fjjCYVxYTO",
     skills: ["JavaScript"],
-    logo: "/icons/frontendmasters.svg",
+    logo: "/icons/certs/frontendmasters.jpeg",
   },
   {
     id: 4,
@@ -168,7 +168,7 @@ export const certs: Cert[] = [
     issueDate: "Nov 2024",
     credentialId: "b7c0e2dfd3-GuXNAjfipL",
     skills: ["Node.js", "Server Development"],
-    logo: "/icons/frontendmasters.svg",
+    logo: "/icons/certs/frontendmasters.jpeg",
   },
   {
     id: 5,
@@ -177,7 +177,7 @@ export const certs: Cert[] = [
     issueDate: "Oct 2024",
     skills: ["TypeScript"],
     credentialId: "cert24zAwJ77fGzop3jqfm8v8Ktj8PFx88QTQoJyp",
-    logo: "/icons/scrimba.svg",
+    logo: "/icons/certs/scrimba.jpeg",
   },
   {
     id: 6,
@@ -186,7 +186,7 @@ export const certs: Cert[] = [
     issueDate: "Jul 2020",
     credentialId: "57BEYX3B8JBG",
     skills: ["HTML", "CSS", "JavaScript"],
-    logo: "/icons/coursera.svg",
+    logo: "/icons/certs/coursera.jpeg",
   },
 ];
 
@@ -221,7 +221,7 @@ export const experienceData = [
     role: "Software Engineer",
     duration: "Jun 2022 - Jul 2023",
     location: "Remote",
-    logo: "/lyftron.jpeg",
+    logo: "/Lyftron.jpeg",
     responsibilities: [
       "Worked across both frontend and backend, implementing new features and improving system performance.",
       "Led the refactoring of the existing codebase, enhancing maintainability and scalability.",
