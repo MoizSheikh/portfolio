@@ -33,7 +33,7 @@ export const NameHero = () => {
 
   const { theme } = useTheme();
 
-  const percentage = theme === "light" ? "80%" : "125%";
+  const percentage = theme === "light" ? "70%" : "125%";
   const lightwhite = "rgba(255, 255, 255, 0.9)";
   const backgroundImage = useMotionTemplate`radial-gradient(${percentage} 125% at 50% 0%,${
     theme === "light" ? lightwhite : "#020617"

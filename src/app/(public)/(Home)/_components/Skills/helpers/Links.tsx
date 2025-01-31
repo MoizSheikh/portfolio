@@ -5,7 +5,7 @@ const Links = () => {
     <div className="relative overflow-hidden w-fit">
       <div style={{ opacity: 1, transform: "none" }}>
         <div className="flex items-center gap-6">
-          <div className="flex items-center gap-4 text-sm text-indigo-300">
+          {/* <div className="flex items-center gap-4 text-sm text-indigo-300">
             <span>My links</span>
             <svg
               stroke="currentColor"
@@ -18,10 +18,10 @@ const Links = () => {
             >
               <path d="M869 487.8L491.2 159.9c-2.9-2.5-6.6-3.9-10.5-3.9h-88.5c-7.4 0-10.8 9.2-5.2 14l350.2 304H152c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h585.1L386.9 854c-5.6 4.9-2.2 14 5.2 14h91.5c1.9 0 3.8-.7 5.2-2L869 536.2a32.07 32.07 0 0 0 0-48.4z" />
             </svg>
-          </div>
+          </div> */}
           <div className="flex items-center text-lg gap-4">
             <a
-              className="text-zinc-300 hover:text-indigo-300 transition-colors"
+              className="text-muted hover:text-indigo-300 transition-colors"
               target="_blank"
               rel="nofollow"
               href="https://www.linkedin.com/in/moizsheikhh"
@@ -41,7 +41,7 @@ const Links = () => {
               </svg>
             </a>
             <a
-              className="text-zinc-300 hover:text-indigo-300 transition-colors"
+              className="text-muted hover:text-indigo-300 transition-colors"
               target="_blank"
               rel="nofollow"
               href="https://www.github.com/moizsheikh"
