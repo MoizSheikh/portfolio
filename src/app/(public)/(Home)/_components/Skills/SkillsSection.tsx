@@ -1,4 +1,4 @@
-// src/components/SkillsSection.tsx
+
 "use client";
 import { cn } from "@/app/_lib/helpers/helpers";
 import {
@@ -22,8 +22,6 @@ interface SkillCategoryProps {
 }
 
 const SkillsSection = () => {
-  // const { scrollYProgress } = useScroll();
-  // const scale = useTransform(scrollYProgress, [0, 1], [0.9, 2]);
   const refCard = useRef(null);
   const isInView = useInView(refCard, { margin: "-1800px 0px -1800px 0px" }); // Adjust margins as needed
 
@@ -34,7 +32,6 @@ const SkillsSection = () => {
 
   const { scrollYProgress } = useScroll({ target: ref });
   const y = useParallax(scrollYProgress, -200);
-  // const time = useTime();
 
   return (
     <motion.section
@@ -85,7 +82,6 @@ const SkillsSection = () => {
           </Link>
        
         </div> */}
-        
       </motion.section>
       <motion.div className="container mx-auto text-left mt-12  md:mt-24">
         <motion.h2

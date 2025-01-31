@@ -1,7 +1,7 @@
 "use client";
 import { Stars } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import {
   useMotionTemplate,
   useMotionValue,
@@ -12,7 +12,7 @@ import {
   MotionValue,
 } from "framer-motion";
 import { DownArrowSVG } from "@/app/_lib/assets/HomepageSVG";
-import { Theme, useTheme } from "@/app/_lib/context/ThemeController";
+import { useTheme } from "@/app/_lib/context/ThemeController";
 
 const COLORS_TOP = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
 
@@ -57,9 +57,6 @@ export const NameHero = () => {
       className="relative grid min-h-screen place-content-center overflow-hidden bg-gray-100/10  dark:bg-gray-950 px-4 pt-40 text-gray-200"
     >
       <motion.div className="relative z-10 flex flex-col items-center">
-          {/* <span className="mb-1.5 inline-block rounded-full bg-heading text-background px-3 py-1.5 text-sm">
-            Hi!
-          </span> */}
         <motion.h1 className="text-3xl sm:text-5xl lg:text-8xl xl:text-[130px] font-extrabold bg-heading bg-clip-text text-center leading-tight text-transparent  sm:leading-tight md:text-8xl md:leading-tight">
           ABDUL MOIZ SHEIKH
         </motion.h1>
