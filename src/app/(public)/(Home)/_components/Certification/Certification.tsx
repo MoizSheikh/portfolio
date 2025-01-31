@@ -8,6 +8,7 @@ const Certification = () => {
   return (
     <div className="py-16 w-full md:w-10/12 lg:w-9/12 xl:w-8/12 mx-auto px-3 md:px-0">
       <h2 className="flex items-baseline text-5xl font-bold text-heading mb-12 text-left">
+        
         Certifications{" "}
         <span className="ml-2 text-indigo-300">
           <SingleDotSvg />
@@ -79,7 +80,7 @@ const Certification = () => {
                 {cert.skills.map((skill: string, index: number) => (
                   <span
                     key={index}
-                    className="text-xs px-2 py-1 rounded-full bg-indigo-300/10 text-indigo-300 border border-indigo-300/20"
+                    className="text-xs px-2 py-1 rounded bg-zinc-700"
                   >
                     {skill}
                   </span>
