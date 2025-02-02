@@ -13,6 +13,7 @@ import { useRef } from "react";
 import Links from "./helpers/Links";
 import { DotsSvg, SingleDotSvg } from "@/app/_lib/assets/HomepageSVG";
 import { MY_SKILLS } from "@/app/_lib/assets/staticData";
+import { useTheme } from "@/app/_lib/context/ThemeController";
 
 interface SkillCategoryProps {
   title: string;
@@ -31,6 +32,7 @@ const SkillsSection = () => {
 
   const { scrollYProgress } = useScroll({ target: ref });
   const y = useParallax(scrollYProgress, -200);
+  const { theme } = useTheme();
 
   return (
     <motion.section
@@ -113,11 +115,11 @@ const SkillsSection = () => {
                     width={64}
                     height={64}
                     style={{
-                      filter: `drop-shadow(0 0 0.8rem color-mix(in srgb, ${skill.color} 40%, transparent))`,
+                      filter: theme === 'dark' ? `drop-shadow(0 0 0.8rem color-mix(in srgb, ${skill.color} 40%, transparent))` : 'none',
                     }}
                   />
                 </span>
-                <span className="bg-transparent shadow-none absolute inset-0 flex items-center justify-center transform scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 group-hover:left-0 group-hover:top-0 transition-all duration-1800 ease-in-out text-white rounded-lg p-2">
+                <span className="text-para bg-transparent shadow-none absolute inset-0 flex items-center justify-center transform scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 group-hover:left-0 group-hover:top-0 transition-all duration-1800 ease-in-out rounded-lg p-2">
                   {skill.name}
                 </span>
               </div>
