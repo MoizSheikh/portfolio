@@ -1,25 +1,17 @@
 "use client";
-import { cn } from "@/app/_lib/helpers/helpers";
 import {
   motion,
   MotionValue,
   useInView,
   useScroll,
   useTransform,
-} from "framer-motion"; // For animations
+} from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 import { useRef } from "react";
 import Links from "./helpers/Links";
-import { DotsSvg, SingleDotSvg } from "@/app/_lib/assets/HomepageSVG";
+import { SingleDotSvg } from "@/app/_lib/assets/HomepageSVG";
 import { MY_SKILLS } from "@/app/_lib/assets/staticData";
 import { useTheme } from "@/app/_lib/context/ThemeController";
-
-interface SkillCategoryProps {
-  title: string;
-  skills: string[];
-  icon: JSX.Element;
-}
 
 const SkillsSection = () => {
   const refCard = useRef(null);
@@ -74,13 +66,6 @@ const SkillsSection = () => {
           </p>
           <Links />
         </motion.div>
-        {/* <div className="w-full flex space-x-4">
-       
-          <Link href="mailto:abdulmoizsheikhh@gmail.com">
-            <Image src="/icons/email.svg" alt="Email" width={50} height={50} />
-          </Link>
-       
-        </div> */}
       </motion.section>
       <motion.div className="container mx-auto text-left mt-12  md:mt-24">
         <motion.h2
@@ -115,7 +100,10 @@ const SkillsSection = () => {
                     width={64}
                     height={64}
                     style={{
-                      filter: theme === 'dark' ? `drop-shadow(0 0 0.8rem color-mix(in srgb, ${skill.color} 40%, transparent))` : 'none',
+                      filter:
+                        theme === "dark"
+                          ? `drop-shadow(0 0 0.8rem color-mix(in srgb, ${skill.color} 40%, transparent))`
+                          : "none",
                     }}
                   />
                 </span>
