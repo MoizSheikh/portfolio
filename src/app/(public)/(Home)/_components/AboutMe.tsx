@@ -3,14 +3,14 @@ const AboutMe = () => {
   return (
     <section className=" home-container pb-12 lg:pb-24 w-full mx-auto text-center ">
       <h2 className="text-4xl font-bold"></h2>
-      <h3 className="mt-4 text-2xl font-medium lg:font-semibold text-para w-full mx-auto px-2 md:px-8 text-left md:text-center">
+      {/* <h3 className="mt-4 text-2xl font-medium lg:font-semibold text-para w-full mx-auto px-2 md:px-8 text-left md:text-center">
         I am a software engineer specializing in building efficient, scalable
         web applications. Skilled in React, Next.js, and TypeScript, I excel at
         solving complex problems, optimizing performance, and crafting seamless
         user experiences. Whether developing from scratch or enhancing legacy
         systems, I focus on delivering clean, maintainable, and future-ready
         solutions aligned with business goals.
-      </h3>
+      </h3> */}
       <p className="my-4 text-gray-600 w-full mx-auto font-light">
         Built with Next, tailwind, Framer Motion, TypeScript and love ❤️
       </p>
