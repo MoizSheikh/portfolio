@@ -1,6 +1,8 @@
 "use client";
 import { Project } from "@/app/_lib/_types/genericTypes";
 import { ExternalLinkSVG, Github } from "@/app/_lib/assets/HomepageSVG";
+import { useTheme } from "@/app/_lib/context/ThemeController";
+import { cn } from "@/app/_lib/helpers/helpers";
 import Image from "next/image";
 
 const ProjectCard = ({
@@ -12,9 +14,17 @@ const ProjectCard = ({
 }) => {
   const { id, name, smallDescription, techStack, img, url, githubLink } =
     project;
+  const { theme } = useTheme();
 
   return (
-    <div className="relative flex-1 rounded-xl border border-card-border bg-card-bg flex flex-col justify-start items-end p-4 min-w-4/12">
+    <div
+      className={cn(
+        "whiteCardShadow relative flex-1 rounded-xl  bg-card-bg flex flex-col justify-start items-end p-4 min-w-4/12",
+        {
+          "border-card-border border": theme === "dark",
+        }
+      )}
+    >
       <div
         className="w-full hover:-rotate-6 hover:-translate-y-8 transition-transform duration-300 cursor-pointer"
         onClick={() => {

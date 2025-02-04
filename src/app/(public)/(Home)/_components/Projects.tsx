@@ -10,7 +10,7 @@ import { SingleDotSvg } from "@/app/_lib/assets/HomepageSVG";
 
 const Projects = () => {
   const [selectedProject, setSelected] = useState<Project | null>(null);
-  const [showAll, setShowAll] = useState(false);
+  const [showAll, setShowAll] = useState(true);
 
   return (
     <>

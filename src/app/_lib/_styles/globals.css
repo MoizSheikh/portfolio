@@ -17,16 +17,19 @@
   --primary-950: #0a141e; /* Ink Black */
 
   --darkBg: #4b556380;
+
+  --root-depth-4: 0 0 0.125rem var(--root-depth-color-1, rgba(0, 0, 0, 0.12)),
+    0 0.125rem 0.25rem var(--root-depth-color-2, rgba(0, 0, 0, 0.14));
 }
 
 .light {
   --background: #fff;
   --foreground: #fbfcfc;
   --card-bg: #ffffff;
-  --card-border: #e2e8f0;  /* Lighter border for cards */
-  --heading: #1e293b;      /* Darker heading for better contrast */
-  --muted: #64748b;        /* Better muted text color for light mode */
-  
+  --card-border: #e2e8f0; /* Lighter border for cards */
+  --heading: #1e293b; /* Darker heading for better contrast */
+  --muted: #64748b; /* Better muted text color for light mode */
+
   --primary: #005e7c;
   --secondary: #5eb1bf;
   --tertiary: #1b1725;
@@ -46,7 +49,7 @@
 .dark {
   --background: #101010; /* Dark background for contrast */
   --foreground: #202a2d; /* Light foreground text for readability */
-  --primary: #7986CB; /* Soft teal stands out against the dark background */
+  --primary: #7986cb; /* Soft teal stands out against the dark background */
   --secondary: #005e7c; /* Deeper teal for secondary elements */
   --tertiary: #1b1725; /* Dark purple for subtle contrast */
   --secondaryAccent: #fffded; /* Light accent for minor details (invert from light theme) */
@@ -66,7 +69,7 @@
   --accent: var(--primary-600);
 
   --card-bg: #141414;
-  --card-border: rgba(38,38,38,0.7);
+  --card-border: rgba(38, 38, 38, 0.7);
   --muted: #d4d4d8;
 }
 /* } */
@@ -221,4 +224,12 @@ input:-webkit-autofill:active {
   overflow: hidden; /* Prevent scrollbar for the placeholder */
   white-space: nowrap; /* Prevent line breaks in the placeholder */
   text-overflow: ellipsis; /* Add ellipsis for overflow */
+}
+
+.whiteCardShadow {
+  /* box-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.12),
+    0 0.125rem 0.25rem rgba(0, 0, 0, 0.14); */
+
+  box-shadow: var(--root-depth-4);
+  border-radius: 1.5rem;
 }
