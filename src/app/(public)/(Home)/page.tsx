@@ -1,6 +1,6 @@
 "use client";
 import SkillsSection from "./_components/Skills/SkillsSection";
-import { ThemeProvider } from "@/app/_lib/context/ThemeController";
+import { ThemeProvider, useTheme } from "@/app/_lib/context/ThemeController";
 import Projects from "./_components/Projects";
 import AboutMe from "./_components/AboutMe";
 import { NameHero } from "./_components/NameHero/NameHero";
@@ -10,6 +10,7 @@ import Certification from "./_components/Certification/Certification";
 import Experience from "./_components/Experience/Experience";
 
 const Home = () => {
+ 
   return (
     <ThemeProvider>
       <Head>
@@ -54,7 +55,7 @@ const Home = () => {
             {/*Hear from the people // future goals // You came
             all the way, Thanks Contact me */}
 
-            <Experience />
+            <Experience/>
             <Certification />
           </div>
           <AboutMe />

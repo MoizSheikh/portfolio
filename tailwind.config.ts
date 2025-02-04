@@ -38,7 +38,8 @@ const config: Config = {
         "btn-active": "var(--btn-active)",
 
         "card-bg": "var(--card-bg)",
-        "card-border": "rgba(38,38,38,0.7)"
+        "card-border": "rgba(38,38,38,0.7)",
+        "chip": " var(--chip)"
       },
       boxShadow: {
         md: "0 4px 9px 4px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",

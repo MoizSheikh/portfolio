@@ -1,9 +1,12 @@
-import React from 'react';
+"use client";
 import { SingleDotSvg } from "@/app/_lib/assets/HomepageSVG";
 import Image from "next/image";
-import { experienceData } from '@/app/_lib/assets/staticData';
+import { experienceData } from "@/app/_lib/assets/staticData";
+import { cn } from "@/app/_lib/helpers/helpers";
+import { useTheme } from "@/app/_lib/context/ThemeController";
 
 const Experience = () => {
+  const {theme} = useTheme();
   return (
     <div className="py-16 w-full md:w-10/12 lg:w-9/12 xl:w-8/12 mx-auto px-3 md:px-0">
       <h2 className="flex items-baseline text-5xl font-bold text-heading mb-12 text-left">
@@ -15,9 +18,15 @@ const Experience = () => {
 
       <div className="space-y-8">
         {experienceData.map((experience) => (
-          <div 
-            key={experience.id} 
-            className="relative flex-1 rounded-xl border border-card-border bg-card-bg p-6 hover:border-indigo-300/50 transition-all duration-300"
+          <div
+            key={experience.id}
+            className={cn(
+              "relative flex-1 rounded-xl bg-card-bg p-6 hover:border-indigo-300/50 transition-all duration-300",
+              {
+                whiteCardShadow: theme === "light",
+                "border border-card-border": theme === "dark",
+              }
+            )}
           >
             <div className="flex items-center justify-between mb-4">
               <div className="flex items-center gap-4">
@@ -32,8 +41,12 @@ const Experience = () => {
                   </div>
                 )}
                 <div>
-                  <h3 className="font-bold text-xl text-heading">{experience.company}</h3>
-                  <p className="text-indigo-300 font-medium">{experience.role}</p>
+                  <h3 className="font-bold text-xl text-heading">
+                    {experience.company}
+                  </h3>
+                  <p className="text-indigo-300 font-medium">
+                    {experience.role}
+                  </p>
                 </div>
               </div>
               <div className="text-right">
@@ -56,7 +69,7 @@ const Experience = () => {
                 {experience.technologies.map((tech, index) => (
                   <span
                     key={index}
-                    className="text-xs px-2 py-1 rounded bg-zinc-700"
+                    className="text-xs px-2 py-1 rounded bg-chip"
                   >
                     {tech}
                   </span>

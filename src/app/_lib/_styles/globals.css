@@ -44,6 +44,7 @@
   --btn-text-disable: var(--primary-400);
   --border: var(--primary-600);
   --para: #333333;
+  --chip: #eeeded;
 }
 
 .dark {
@@ -71,6 +72,7 @@
   --card-bg: #141414;
   --card-border: rgba(38, 38, 38, 0.7);
   --muted: #d4d4d8;
+  --chip: #3F3F46;
 }
 /* } */
 
@@ -227,9 +229,5 @@ input:-webkit-autofill:active {
 }
 
 .whiteCardShadow {
-  /* box-shadow: 0 0 0.125rem rgba(0, 0, 0, 0.12),
-    0 0.125rem 0.25rem rgba(0, 0, 0, 0.14); */
-
   box-shadow: var(--root-depth-4);
-  border-radius: 1.5rem;
 }

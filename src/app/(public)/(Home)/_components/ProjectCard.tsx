@@ -19,9 +19,10 @@ const ProjectCard = ({
   return (
     <div
       className={cn(
-        "whiteCardShadow relative flex-1 rounded-xl  bg-card-bg flex flex-col justify-start items-end p-4 min-w-4/12",
+        "relative flex-1 rounded-xl  bg-card-bg flex flex-col justify-start items-end p-4 min-w-4/12",
         {
           "border-card-border border": theme === "dark",
+          "whiteCardShadow": theme === "light",
         }
       )}
     >
