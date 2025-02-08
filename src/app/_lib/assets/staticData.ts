@@ -119,7 +119,7 @@ export const MY_SKILLS = [
   { name: "TailwindCSS", icon: "/icons/tailwind.svg", color: "#38B2AC" },
   { name: "JavaScript", icon: "/icons/js.svg", color: "#F7DF1E" },
   { name: "TypeScript", icon: "/icons/ts.svg", color: "#3178C6" },
-  { name: "React", icon: "/icons/react.svg", color: "#61DAFB" },
+  { name: "React", icon: "/icons/skills/reactJS.svg", color: "#61DAFB" },
   { name: "Redux", icon: "/icons/redux.svg", color: "#764ABC" },
   { name: "Next.js", icon: "/icons/next.svg", color: "#000000" },
   { name: "Node.js", icon: "/icons/node.svg", color: "#339933" },
