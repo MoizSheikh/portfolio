@@ -22,7 +22,7 @@ const ProjectCard = ({
         "relative flex-1 rounded-xl  bg-card-bg flex flex-col justify-start items-end p-4 min-w-4/12",
         {
           "border-card-border border": theme === "dark",
-          "whiteCardShadow": theme === "light",
+          whiteCardShadow: theme === "light",
         }
       )}
     >
@@ -60,12 +60,12 @@ const ProjectCard = ({
             />
           )}
         </div>
-        <p className="text-[#a3a3a3] overflow-hidden text-ellipsis whitespace-nowrap w-full">
+        <p className="text-muted overflow-hidden text-ellipsis whitespace-nowrap w-full text-sm">
           {techStack.join(" - ")}
         </p>
 
         <div>
-          <p className="text-sm text-muted ">{smallDescription}</p>
+          <p className="text-sm text-para ">{smallDescription}</p>
           <div
             role="button"
             onClick={() => setSelected(project)}
