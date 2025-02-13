@@ -7,9 +7,6 @@ const AboutMe = () => {
       <p className="my-4 text-gray-600 w-full mx-auto font-light">
         Built with Next, tailwind, Framer Motion, TypeScript and love ❤️
       </p>
-      <button onClick={() => console.log("help")} className="btn">
-        help
-      </button>
 
       {/* <form className="flex w-full max-w-sm items-center gap-1.5">
         <input
