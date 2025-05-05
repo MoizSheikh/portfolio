@@ -5,7 +5,16 @@ const AboutMe = () => {
       <h2 className="text-4xl font-bold"></h2>
       <h3 className="text-4xl font-bold">Feel free to contact</h3>
       <p className="my-4 text-gray-600 w-full mx-auto font-light">
-        Built with Next, tailwind, Framer Motion, TypeScript and love ❤️
+        Built with Next, tailwind, Framer Motion, TypeScript and{" "}
+        <span
+          role="button"
+          onClick={() => {
+            console.log("Love");
+          }}
+        >
+          Love
+        </span>{" "}
+        ❤️
       </p>
 
       {/* <form className="flex w-full max-w-sm items-center gap-1.5">
