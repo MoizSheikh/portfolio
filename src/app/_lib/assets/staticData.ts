@@ -24,6 +24,23 @@ export const projectsData: Project[] = [
     githubLink: "",
   },
   {
+    id: 5,
+    name: "Bayut",
+    description:
+      "A platform for car inspections where users can register as inspectors or hire one when buying a used car.",
+    smallDescription: "Zillow for Saudi Arabia’s real estate market.",
+    techStack: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MySQL",
+      "Elasticsearch",
+      "Mapbox",
+    ],
+    img: "/projects/bayut.png",
+    url: "https://bayut.com",
+  },
+  {
     id: 2,
     name: "HoopWorld",
     smallDescription:
@@ -41,6 +58,44 @@ export const projectsData: Project[] = [
     ],
     img: "/projects/hoopworld.png",
     url: "https://hoopwrld.com",
+  },
+  {
+    id: 6,
+    name: "Dubizzle",
+    description:
+      "A classifieds platform enabling users to buy, sell, and rent everything from cars and properties to jobs and services across the UAE and MENA region, similar to Craigslist but localized for the Middle East.",
+    smallDescription: "Craigslist for the Middle East.",
+    techStack: [
+      "React",
+      "Node.js",
+      "Express.js",
+      "MySQL",
+      "Elasticsearch",
+      "Mapbox",
+    ],
+    img: "/projects/dubizzle.png",
+    url: "https://dubizzle.com",
+  },
+
+  {
+    id: 4,
+    name: "CarSpector",
+    description:
+      "An app for car inspections where users can register as inspectors or hire one when buying a used car.",
+    smallDescription: "Car inspection service for buying used cars.",
+    techStack: ["React", "Node.js", "Express.js", "MongoDB", "SCSS", "Stripe"],
+    img: "/projects/carspector.png",
+  },
+
+  {
+    id: 7,
+    name: "OLX",
+    description:
+      "A leading Pakistani classifieds platform for buying, selling, and renting vehicles, property, electronics, and more—offering localized features tailored to Pakistan’s market needs.",
+    smallDescription: "Craigslist for Pakistan.",
+    techStack: ["React", "Node.js", "Express.js", "PostgreSQL", "Redis", "AWS"],
+    img: "/projects/olx.png",
+    url: "https://olx.com.pk",
   },
   {
     id: 3,
@@ -61,24 +116,6 @@ export const projectsData: Project[] = [
     img: "/projects/glorious_me.png",
     url: "https://www.wimc.me",
   },
-  {
-    id: 4,
-    name: "CarSpector",
-    description:
-      "An app for car inspections where users can register as inspectors or hire one when buying a used car.",
-    smallDescription: "Car inspection service for buying used cars.",
-    techStack: ["React", "Node.js", "Express.js", "MongoDB", "SCSS", "Stripe"],
-    img: "/projects/carspector.png",
-  },
-  // {
-  //   id: 5,
-  //   name: "Teachify",
-  //   description:
-  //     "A platform for teachers to create, share, and purchase lesson plans, similar to Fiverr but focused on education.",
-  //   smallDescription: "Fiverr for teachers to buy and sell lesson plans.",
-  //   techStack: ["React", "Node.js", "Express.js", "MongoDB", "SCSS", "Stripe"],
-  //   img: "/projects/alignwithme.png",
-  // },
 ];
 
 export const journeyData = [

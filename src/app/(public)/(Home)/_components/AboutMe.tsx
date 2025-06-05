@@ -1,8 +1,37 @@
+import { useState } from "react";
 import Button from "@/app/_components/Buttons/HomepageBtn";
+
 const AboutMe = () => {
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus("loading");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email, message }),
+      });
+
+      if (!response.ok) throw new Error("Failed to send message");
+      
+      setStatus("success");
+      setEmail("");
+      setMessage("");
+    } catch (error) {
+      setStatus("error");
+    }
+  };
+
   return (
-    <section className=" home-container pb-12 lg:pb-24 w-full mx-auto text-center ">
-      <h2 className="text-4xl font-bold"></h2>
+    <section className="home-container pb-12 lg:pb-24 w-full mx-auto text-center">
+      <h2 className="text-4xl font-bold">Get in Touch</h2>
       <h3 className="text-4xl font-bold">Feel free to contact</h3>
       <p className="my-4 text-gray-600 w-full mx-auto font-light">
         Built with Next, tailwind, Framer Motion, TypeScript and{" "}
@@ -17,32 +46,37 @@ const AboutMe = () => {
         ❤️
       </p>
 
-      {/* <form className="flex w-full max-w-sm items-center gap-1.5">
+      <form onSubmit={handleSubmit} className="flex flex-col w-full max-w-md mx-auto gap-4">
         <input
           type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           placeholder="Enter your email"
-          className="h-fit w-full rounded-md border border-zinc-500 bg-zinc-700 px-3 py-2 transition-colors focus:border-white focus:outline-none"
+          required
+          className="h-fit w-full rounded-md border border-zinc-500 bg-zinc-700 px-3 py-2 transition-colors focus:border-white focus:outline-none text-white"
+        />
+        <textarea
+          value={message}
+          onChange={(e) => setMessage(e.target.value)}
+          placeholder="Your message"
+          required
+          className="h-32 w-full rounded-md border border-zinc-500 bg-zinc-700 px-3 py-2 transition-colors focus:border-white focus:outline-none text-white resize-none"
         />
         <button
           type="submit"
-          className="grid size-10 shrink-0 place-content-center rounded-md bg-white text-xl text-zinc-900 transition-colors hover:bg-zinc-200"
+          disabled={status === "loading"}
+          className="relative z-0 cursor-pointer flex items-center justify-center gap-2 overflow-hidden rounded-md border-[1px] border-white px-4 py-2 font-medium text-sm text-white transition-all duration-300 before:absolute before:inset-0 before:-z-10 before:translate-x-[150%] before:translate-y-[150%] before:scale-[2.5] before:rounded-[100%] before:bg-white before:transition-transform before:duration-1000 before:content-[''] hover:text-zinc-950 hover:before:translate-x-[0%] hover:before:translate-y-[0%] active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          <svg
-            stroke="currentColor"
-            fill="none"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            height="1em"
-            width="1em"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-            <polyline points="22,6 12,13 2,6"></polyline>
-          </svg>
+          {status === "loading" ? "Sending..." : "Send Message"}
         </button>
-      </form> */}
+        
+        {status === "success" && (
+          <p className="text-green-500">Message sent successfully!</p>
+        )}
+        {status === "error" && (
+          <p className="text-red-500">Failed to send message. Please try again.</p>
+        )}
+      </form>
     </section>
   );
 };
