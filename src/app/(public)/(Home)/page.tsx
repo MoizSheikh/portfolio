@@ -11,37 +11,6 @@ import Experience from "./_components/Experience/Experience";
 import CardStack from "@/app/_components/CardStack";
 
 const Home = () => {
-  const myFun = () => {
-    console.log("myFun Called");
-  };
-
-  // const debounce = (cb, delay) => {
-  //   let timeoutId = null;
-
-  //   return function () {
-  //     clearTimeout(timeoutId);
-  //     console.log("timeoutId", timeoutId);
-  //     timeoutId = setTimeout(() => {
-  //       cb();
-  //     }, delay);
-  //   };
-  // };
-
-  // const debouncedFun = debounce(myFun, 3000);
-
-  function throttle(cb, delay) {
-    let timeoutId;
-    return function () {
-      if (!!timeoutId) return;
-      console.log("inside");
-      cb();
-      timeoutId = setTimeout(() => {
-        timeoutId = null;
-      }, delay);
-    };
-  }
-
-  const throttledFun = throttle(myFun, 900);
   return (
     <ThemeProvider>
       <Head>
@@ -79,7 +48,7 @@ const Home = () => {
         <div className=" w-full m-auto text-center md:text-left text-para z-20 relative ">
           <div className=" pb-8">
             <NameHero />
-            <button onClick={throttledFun}>click me again n again</button>
+
             <SkillsSection />
             <Projects />
             <CardStack />
