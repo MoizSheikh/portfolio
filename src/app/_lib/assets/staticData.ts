@@ -25,7 +25,7 @@ export const projectsData: Project[] = [
   },
   {
     id: 5,
-    name: "Bayut",
+    name: "Bayut.com",
     description:
       "A platform for car inspections where users can register as inspectors or hire one when buying a used car.",
     smallDescription: "Zillow for Saudi Arabia’s real estate market.",
@@ -42,7 +42,7 @@ export const projectsData: Project[] = [
   },
   {
     id: 2,
-    name: "HoopWorld",
+    name: "Hoopwrld",
     smallDescription:
       "AI platform for personalized basketball assessments and player development.",
     description:
@@ -61,7 +61,7 @@ export const projectsData: Project[] = [
   },
   {
     id: 6,
-    name: "Dubizzle",
+    name: "Dubizzle.com",
     description:
       "A classifieds platform enabling users to buy, sell, and rent everything from cars and properties to jobs and services across the UAE and MENA region, similar to Craigslist but localized for the Middle East.",
     smallDescription: "Craigslist for the Middle East.",
@@ -89,13 +89,23 @@ export const projectsData: Project[] = [
 
   {
     id: 7,
-    name: "OLX",
+    name: "olx.com.pk",
     description:
       "A leading Pakistani classifieds platform for buying, selling, and renting vehicles, property, electronics, and more—offering localized features tailored to Pakistan’s market needs.",
     smallDescription: "Craigslist for Pakistan.",
     techStack: ["React", "Node.js", "Express.js", "PostgreSQL", "Redis", "AWS"],
     img: "/projects/olx.png",
     url: "https://olx.com.pk",
+  },
+  {
+    id: 8,
+    name: "Crosscheck",
+    description:
+      "Centralized test management tool for managing test cases, test suites, and test results.",
+    smallDescription: "Centralized test management tool",
+    techStack: ["React", "Node.js", "Express.js", "MongoDB", "AWS"],
+    img: "/projects/crosscheck.png",
+    url: "https://www.crosscheck.cloud",
   },
   {
     id: 3,
