@@ -25,7 +25,7 @@ const Home = () => {
         <meta name="author" content="Abdul Moiz Sheikh" />
         <meta
           name="keywords"
-          content="Abdul Moiz Sheikh, Full-Stack Developer, Portfolio, React Developer, Next.js Developer, JavaScript, MERN Stack"
+          content="Abdul Moiz Sheikh, Full-Stack Developer, Portfolio, React Developer, Next.js Developer, JavaScript, TypeScript"
         />
         <meta name="robots" content="index, follow" />
         <meta name="googlebot" content="index, follow" />

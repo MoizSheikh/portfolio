@@ -41,7 +41,7 @@ const SkillsSection = () => {
       <motion.section className="home-container py-4 w-full bg-background text-center md:text-left flex items-center flex-col-reverse md:flex-row align-middle justify-start gap-14 px-0">
         <motion.div className="w-full text-left md:text-center">
           <p className="my-6 text-para w-full lg:w-4/5 font-medium !leading-6 text-left">
-            I am a passionate software engineer with over 2.5 years of
+            I am a passionate software engineer with 4 years of
             professional experience in full-stack web development. My expertise
             lies in crafting scalable, high-performance web applications using
             modern technologies like React, Next.js, Node.js, and TypeScript. I
