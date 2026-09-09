@@ -228,7 +228,7 @@ export const experienceData = [
     id: 1,
     company: "Laam",
     role: "Full Stack Engineer",
-    duration: "Jan 2026 - Present",
+    duration: "Dec 2025 - Present",
     location: "Lahore, Punjab, Pakistan",
     logo: "",
     responsibilities: [
