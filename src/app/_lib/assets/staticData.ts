@@ -2,12 +2,31 @@ import { Cert, Project } from "../_types/genericTypes";
 
 export const projectsData: Project[] = [
   {
+    id: 9,
+    name: "Mycelium (MyCLM)",
+    smallDescription:
+      "No-code platform for contract lifecycle and freight-forwarding operations.",
+    description:
+      "Solo founder-engineer. Ops teams build their own tables, pages, workflows, invoices, and PDFs through a visual builder, and every client runs on its own isolated database and automation server. A compiler turns drag-and-drop React Flow workflows into live n8n pipelines, powering an AI pipeline that reads air-freight pre-alert emails, extracts data from scanned PDFs with GPT vision, and creates full shipment records. Includes a complete finance layer with ledgers, branded invoices, and multi-currency FX, plus AI copilots that design data models and pages from plain English.",
+    techStack: [
+      "Next.js",
+      "TypeScript",
+      "Supabase",
+      "PostgreSQL",
+      "n8n",
+      "React Flow",
+      "OpenAI API",
+    ],
+    img: "/projects/myclm.png",
+    url: "https://my-clm.com",
+  },
+  {
     id: 1,
     name: "Align With Me",
     smallDescription:
       "Personalized user guides with real-time collaboration to improve how teams work together.",
     description:
-      "“Designed a platform to create personalized user guides based on work styles, communication preferences, and professional goals. The platform enhances collaboration by helping teams and individuals understand each other better. Features include customization, team dashboards, real-time collaboration, and an OpenAI-powered chat assistant.”",
+      "Built end-to-end solo — a SaaS that turns each teammate's MBTI, DISC, Enneagram, Kolbe, and CliftonStrengths results into one AI-generated Personal User Guide. Features a 10-minute AI voice interview, team dynamics clustering, an AI chat over the whole team, and a culture database of 441 company profiles synthesized from 5,389 cited sources.",
     techStack: [
       "Next.js",
       "MongoDB",
