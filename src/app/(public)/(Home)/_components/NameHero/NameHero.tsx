@@ -61,7 +61,7 @@ export const NameHero = () => {
           ABDUL MOIZ SHEIKH
         </motion.h1>
         <p className="my-6 max-w-xl text-center text-heading leading-relaxed md:text-lg md:leading-relaxed">
-          SOFTWARE ENGINEER, WEB DEVELOPER, AND DESIGNER
+          FULL-STACK SOFTWARE ENGINEER — REACT, TYPESCRIPT, PYTHON
         </p>
         <motion.div
           style={{
