@@ -9,6 +9,7 @@ import {
 import Image from "next/image";
 import { useRef } from "react";
 import Links from "./helpers/Links";
+import ToptalBadge from "./helpers/ToptalBadge";
 import { SingleDotSvg } from "@/app/_lib/assets/HomepageSVG";
 import { MY_SKILLS } from "@/app/_lib/assets/staticData";
 import { useTheme } from "@/app/_lib/context/ThemeController";
@@ -66,6 +67,7 @@ const SkillsSection = () => {
           </p>
           <Links />
         </motion.div>
+        <ToptalBadge />
       </motion.section>
       <motion.div className="container mx-auto text-left mt-12  md:mt-24">
         <motion.h2
