@@ -317,25 +317,6 @@ export default function CardStack() {
         </div>
       </div>
 
-      {/* Progress indicator using Daisy UI */}
-      <div className="flex justify-center mt-8">
-        <div className="join">
-          {certs.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentIndex(index)}
-              className={`btn btn-xs join-item ${
-                index === currentIndex
-                  ? "btn-primary"
-                  : "btn-outline"
-              }`}
-            >
-              {index + 1}
-            </button>
-          ))}
-        </div>
-      </div>
-
       {/* Current card info */}
       {/* <div className="text-center mt-6">
         <div className="alert alert-info shadow-lg max-w-md mx-auto">
@@ -349,7 +330,7 @@ export default function CardStack() {
       </div> */}
 
       {/* Instructions using Daisy UI */}
-      <div className="text-center mt-4">
+      <div className="text-center mt-8">
         <div className="flex justify-center items-center space-x-4 text-sm">
           <div className="tooltip" data-tip="Scroll over the cards">
             <div className="badge badge-neutral gap-2">
