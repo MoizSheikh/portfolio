@@ -1,114 +1,109 @@
 "use client";
+import { useRef, useState } from "react";
+import Image from "next/image";
+import { motion, useInView } from "framer-motion";
 import { Cert } from "@/app/_lib/_types/genericTypes";
 import { certs } from "@/app/_lib/assets/staticData";
-import React from "react";
 import { SingleDotSvg } from "@/app/_lib/assets/HomepageSVG";
-import Image from "next/image";
 import { cn } from "@/app/_lib/helpers/helpers";
 import { useTheme } from "@/app/_lib/context/ThemeController";
 
-const Certification = () => {
+const CertCard = ({ cert, active }: { cert: Cert; active?: boolean }) => {
   const { theme } = useTheme();
-
   return (
-    <div className="py-16 w-full md:w-10/12 lg:w-9/12 xl:w-8/12 mx-auto px-3 md:px-0">
-      <h2 className="flex items-baseline text-5xl font-bold text-heading mb-12 text-left">
-        Certifications{" "}
-        <span className="ml-2 text-indigo-300">
-          <SingleDotSvg />
-        </span>
-      </h2>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {certs.map((cert: Cert) => (
-          <div
-            key={cert.id}
-            className={cn(
-              "relative flex-1 rounded-xl bg-card-bg flex flex-col p-6 hover:border-indigo-300/50 transition-all duration-300 cursor-pointer",
-              {
-                whiteCardShadow: theme === "light",
-                "border border-card-border": theme === "dark",
-              }
-            )}
-          >
-            <div className="flex flex-col h-full">
-              <div className="flex items-center justify-between mb-4">
-                <h2 className="font-bold text-lg text-heading">{cert.name}</h2>
-                {cert.logo && (
-                  <div className="relative w-8 h-8">
-                    <Image
-                      src={cert.logo}
-                      alt={`${cert.issuer} logo`}
-                      fill
-                      className="object-contain"
-                    />
-                  </div>
-                )}
-              </div>
-
-              <div className="flex items-center gap-2 text-muted">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4 text-indigo-300"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
-                  />
-                </svg>
-                <span className="text-sm">{cert.issuer}</span>
-              </div>
-
-              <div className="flex items-center gap-2 mt-1 text-muted">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-4 w-4 text-indigo-300"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"
-                  />
-                </svg>
-                <span className="text-sm">{cert.issueDate}</span>
-              </div>
-
-              <div className="w-full h-[1px] bg-zinc-600 my-4"></div>
-
-              <div className="flex flex-wrap gap-2 mt-auto">
-                {cert.skills.map((skill: string, index: number) => (
-                  <span
-                    key={index}
-                    className="text-xs px-2 py-1 rounded bg-chip"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-
-              {/* {cert.credentialId && (
-                <div className="mt-4 text-right">
-                  <div className="tooltip" data-tip="Credential ID">
-                    <div className="text-xs text-muted font-mono">
-                      {cert.credentialId}
-                    </div>
-                  </div>
-                </div>
-              )} */}
-            </div>
+    <div
+      className={cn(
+        "flex h-full w-full flex-col rounded-2xl bg-card-bg p-5 text-left transition-colors",
+        active ? "ring-2 ring-sky-500" : "",
+        {
+          "shadow-lighter": theme === "light",
+          "border border-card-border shadow-2xl shadow-black/50": theme === "dark",
+        }
+      )}
+    >
+      <div className="flex items-center justify-between">
+        {cert.logo && (
+          <div className="relative h-9 w-9 overflow-hidden rounded-lg">
+            <Image src={cert.logo} alt={`${cert.issuer} logo`} fill className="object-cover" />
           </div>
+        )}
+        <span className="text-xs text-muted">{cert.issueDate}</span>
+      </div>
+      <h3 className="mt-4 text-base font-bold leading-snug text-heading">
+        {cert.name}
+      </h3>
+      <p className="mt-1 text-xs text-sky-500">{cert.issuer}</p>
+      <div className="mt-auto flex flex-wrap gap-1.5 pt-4">
+        {cert.skills.map((s) => (
+          <span key={s} className="rounded bg-chip px-2 py-0.5 text-[10px]">
+            {s}
+          </span>
         ))}
       </div>
     </div>
+  );
+};
+
+const Certification = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const inView = useInView(ref, { once: true, margin: "-150px" });
+  const [hovered, setHovered] = useState<number | null>(null);
+  const [dealt, setDealt] = useState(false);
+  const mid = (certs.length - 1) / 2;
+
+  return (
+    <section className="mx-auto w-full overflow-hidden px-3 py-24 md:w-10/12 md:px-0 lg:w-9/12 xl:w-8/12">
+      <h2 className="flex items-baseline text-left text-4xl font-bold text-heading md:text-5xl">
+        Certifications
+        <span className="ml-2 text-sky-500">
+          <SingleDotSvg />
+        </span>
+      </h2>
+      <p className="mt-2 text-left text-muted">
+        Hover a card to pull it out of the deck.
+      </p>
+
+      <div ref={ref} className="relative mt-16 hidden h-[380px] items-end justify-center md:flex">
+        {certs.map((cert, i) => {
+          const off = i - mid;
+          const isHover = hovered === i;
+          const push = hovered === null ? 0 : i < hovered ? -24 : i > hovered ? 24 : 0;
+          return (
+            <motion.div
+              key={cert.id}
+              onMouseEnter={() => setHovered(i)}
+              onMouseLeave={() => setHovered(null)}
+              initial={{ x: 0, y: 40, rotate: 0, opacity: 0 }}
+              animate={
+                inView
+                  ? {
+                      x: push,
+                      y: isHover ? -48 : Math.abs(off) * Math.abs(off) * 6,
+                      rotate: isHover ? 0 : off * 5,
+                      opacity: 1,
+                      scale: isHover ? 1.06 : 1,
+                    }
+                  : {}
+              }
+              transition={{ type: "spring", stiffness: 220, damping: 22, delay: dealt ? 0 : i * 0.08 }}
+              onAnimationComplete={() => i === certs.length - 1 && inView && setDealt(true)}
+              style={{ zIndex: isHover ? 50 : 10 + i, transformOrigin: "50% 120%" }}
+              className="relative -ml-14 h-72 w-48 shrink-0 cursor-pointer first:ml-0 lg:-ml-10 lg:w-56"
+            >
+              <CertCard cert={cert} active={isHover} />
+            </motion.div>
+          );
+        })}
+      </div>
+
+      <div className="-mx-3 mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto px-3 pb-4 md:hidden">
+        {certs.map((cert) => (
+          <div key={cert.id} className="h-64 w-56 shrink-0 snap-start">
+            <CertCard cert={cert} />
+          </div>
+        ))}
+      </div>
+    </section>
   );
 };
 

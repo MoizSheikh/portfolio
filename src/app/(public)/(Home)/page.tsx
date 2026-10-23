@@ -8,7 +8,6 @@ import Header from "./_components/Header/Header";
 import Head from "next/head";
 import Certification from "./_components/Certification/Certification";
 import Experience from "./_components/Experience/Experience";
-import CardStack from "@/app/_components/CardStack";
 
 const Home = () => {
   return (
@@ -51,7 +50,6 @@ const Home = () => {
 
             <SkillsSection />
             <Projects />
-            <CardStack />
             {/* <Journey /> */}
 
             {/*Hear from the people // future goals // You came
